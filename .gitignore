@@ -1,0 +1,14 @@
+.DS_Store
+*.skill
+/logs/
+/outputs/
+outputs/
+/.claude/
+__pycache__/
+*.pyc
+*.tmp
+*.swp
+*.swo
+.vscode/
+.idea/
+out/

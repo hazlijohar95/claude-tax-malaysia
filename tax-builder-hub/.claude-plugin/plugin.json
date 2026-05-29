@@ -1,0 +1,8 @@
+{
+  "name": "tax-builder-hub",
+  "version": "1.0.0",
+  "description": "Finds, evaluates, and installs community tax skills — with a Tax Skill Design Framework QA review and a security gate before anything lands in your environment.",
+  "author": {
+    "name": "Hazli Johar"
+  }
+}

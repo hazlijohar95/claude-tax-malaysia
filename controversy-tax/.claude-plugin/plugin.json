@@ -1,0 +1,8 @@
+{
+  "name": "controversy-tax",
+  "version": "1.0.0",
+  "description": "Manages tax audits, assessments, and disputes matter-by-matter — runs intake and portfolio status, responds to LHDN audit queries, reviews notices of assessment against their basis, drafts objections under s.99 ITA and appeals to the SCIT with deadline gates, and analyses penalty exposure and remission arguments. Every fact traced to source; every deadline flagged against the limitation period.",
+  "author": {
+    "name": "Hazli Johar"
+  }
+}

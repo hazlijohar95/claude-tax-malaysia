@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Notify the team about new and updated community tax skills."
+    }
+  },
+  "recommendedCategories": [
+    "chat",
+    "developer-tools"
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "claude-for-tax",
+  "description": "Reference agents, skills, and data connectors for the tax workflows we see most — corporate income tax and provision, indirect tax (SST/VAT/GST), tax controversy and audit defence, transfer pricing and international tax — built Malaysia-first with a verify-don't-assume posture and a jurisdiction-recognition layer for everything else.",
+  "owner": {
+    "name": "Hazli Johar"
+  },
+  "plugins": [
+    {
+      "name": "corporate-tax",
+      "displayName": "Corporate Tax",
+      "source": "./corporate-tax",
+      "description": "Builds and reviews company income tax computations against the Income Tax Act 1967, prepares the MFRS 112 / IAS 12 current and deferred tax provision with a deferred-tax proof, reviews the return (Form C) before filing, computes capital allowances, and tracks filing and instalment deadlines — every figure traced to a source document and tied back to the computation.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "indirect-tax",
+      "displayName": "Indirect Tax (SST)",
+      "source": "./indirect-tax",
+      "description": "Determines whether a supply is taxable under the Sales Tax Act 2018 and Service Tax Act 2018, checks registration thresholds, reviews the SST-02 return before submission, assesses input-cost and exemption treatment, and runs e-invoicing (MyInvois) readiness checks — calibrated to your industry and group.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "controversy-tax",
+      "displayName": "Tax Controversy",
+      "source": "./controversy-tax",
+      "description": "Manages tax audits, assessments, and disputes matter-by-matter — runs intake and portfolio status, responds to LHDN audit queries, reviews notices of assessment against their basis, drafts objections under s.99 ITA and appeals to the SCIT with deadline gates, and analyses penalty exposure and remission arguments. Every fact traced to source; every deadline flagged against the limitation period.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "international-tax",
+      "displayName": "International Tax & Transfer Pricing",
+      "source": "./international-tax",
+      "description": "Prepares transfer pricing documentation (Local File / Master File) against the Malaysian TP Rules and OECD Guidelines, reviews arm's-length method selection and benchmarking, characterises related-party transactions, determines withholding tax and treaty relief on cross-border payments, applies double tax agreements, and screens BEPS Pillar Two (GloBE) applicability — every position flagged for verification, because this area changes fastest.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "personal-tax",
+      "displayName": "Personal Tax",
+      "source": "./personal-tax",
+      "description": "Builds and reviews individual income tax computations under the Income Tax Act 1967 — resident scale vs non-resident treatment, employment income (s.13 salary, BIK, perquisites, ESOS, gratuity), personal reliefs and rebates, the self-assessment return (Form BE / Form B), and filing and instalment deadlines — every figure traced to a source document (EA form, statements) and tied back to the computation, every rate, relief, and threshold flagged for verification against current LHDN guidance.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "employment-tax",
+      "displayName": "Employment Tax (Payroll)",
+      "source": "./employment-tax",
+      "description": "Handles the employer's payroll-tax obligations under Malaysian law — computes monthly tax deduction (PCB/MTD) including additional remuneration, EPF / SOCSO / EIS statutory contributions, and benefit-in-kind and perquisite valuation (including ESOS); reviews the employer return (Form E / CP8D) and the EA statement; and runs tax clearance (SPC) for departing and leaving-Malaysia employees with the withholding obligation. The employer carries the liability for under-deduction, so every figure traces to payroll source and ties back, and every rate, ceiling, and PCB-schedule constant is flagged for verification against current LHDN / EPF / PERKESO guidance.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    },
+    {
+      "name": "tax-builder-hub",
+      "displayName": "Tax Builder Hub",
+      "source": "./tax-builder-hub",
+      "description": "Finds, evaluates, and installs community tax skills — with a Tax Skill Design Framework QA review and a security gate before anything lands in your environment.",
+      "author": {
+        "name": "Hazli Johar"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch matter documents — audit letters, notices of assessment, correspondence, working papers, source records — from Google Drive."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, post deadline alerts and matter status to your workspace."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "matter-management",
+    "chat",
+    "tax-research"
+  ]
+}

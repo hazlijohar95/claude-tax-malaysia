@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch source documents — sales/purchase listings, invoices, prior SST-02 returns — from Google Drive."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, post SST return reminders and review summaries to your workspace."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "accounting",
+    "e-invoicing",
+    "chat",
+    "tax-research"
+  ]
+}

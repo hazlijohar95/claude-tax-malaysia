@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch source documents — intercompany agreements, financials, prior TP documentation, group structure charts — from Google Drive."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, post documentation-deadline reminders and review summaries."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "accounting",
+    "chat",
+    "tax-research",
+    "benchmarking"
+  ]
+}

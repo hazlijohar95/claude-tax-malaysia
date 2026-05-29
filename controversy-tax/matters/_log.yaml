@@ -1,0 +1,55 @@
+# Portfolio Ledger — controversy-tax
+#
+# One entry per matter under `matters:`. Source of truth for /portfolio-status
+# rollups. Closed matters stay in this file (searchable history) but are filtered
+# out of active rollups by default. Edit via /controversy-tax:matter-intake and
+# /matter-update — direct edits are fine but show your work in the matter's
+# history.md.
+#
+# Every date and every statutory reference below is the team's recorded figure,
+# tagged for verification — the ledger is not a primary source. Confirm the
+# controlling deadline against the actual notice and the current procedure.
+#
+# ──────────────────────────────────────────────────────────────────────────
+# Schema
+# ──────────────────────────────────────────────────────────────────────────
+# - id:                string — slug, stable; matches matters/[slug]/ folder
+#   name:              string — display name
+#   taxpayer:          string — the assessed taxpayer (entity or individual)
+#   type:              field-audit | desk-audit | notice-of-assessment | tp-adjustment |
+#                      investigation | penalty | other
+#   stage:             string — free-text substage (e.g. "audit queries", "objection drafted",
+#                      "SCIT appeal filed")
+#   status:            audit | assessment-raised | objection-filed | review | scit-appeal |
+#                      high-court | settled | closed
+#   years_of_assessment: [int]      # the YAs in dispute
+#   authority:         string — the revenue body / forum (e.g. "LHDN", "SCIT")
+#   assessor_basis:    string — one line: the assessor's stated basis, quoted from the notice
+#   exposure:
+#     tax:             string — additional tax in dispute, with currency (e.g. "RM480,000")
+#     penalty:         string — penalty exposure (e.g. "45% s.113(2)") `[verify]`
+#     range:           string — best/worst settlement range if assessed
+#   controlling_deadline:
+#     type:            objection-window | audit-query-response | appeal-period | other
+#     date:            YYYY-MM-DD | null     # the one-way-door date
+#     basis:           string — e.g. "s.99 ITA, 30 days from notice dated YYYY-MM-DD `[verify]`"
+#     diarised:        bool
+#   limitation:        string | null — limitation period position (e.g. "s.91 5-year; fraud uncapped `[verify]`")
+#   adviser:
+#     lead:            string | null
+#     firm:            string | null
+#   internal_owner:    string | null
+#   risk:              critical | high | medium | low
+#   opened:            YYYY-MM-DD
+#   next_deadline:     YYYY-MM-DD | null      # nearest action deadline (may differ from controlling_deadline)
+#   last_updated:      YYYY-MM-DD
+#   path:              string — "matters/[slug]/"
+#
+# Closed matters additionally carry:
+#   closed:            YYYY-MM-DD
+#   outcome:           withdrawn-by-lhdn | reduced | confirmed | settled | won-at-scit |
+#                      lost-at-scit | other
+#   final_position:    string — the settled figure and how it landed vs exposure
+# ──────────────────────────────────────────────────────────────────────────
+
+matters: []

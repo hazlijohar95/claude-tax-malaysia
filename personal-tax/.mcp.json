@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch source documents — EA / EC forms, payslips, dividend and rental statements, receipts for relief claims, and prior-year returns — from Google Drive."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, post filing-deadline alerts and review summaries to your workspace."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "accounting",
+    "chat",
+    "spreadsheets",
+    "tax-research"
+  ]
+}

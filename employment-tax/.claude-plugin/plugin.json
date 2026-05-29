@@ -1,0 +1,8 @@
+{
+  "name": "employment-tax",
+  "version": "1.0.0",
+  "description": "Handles the employer's payroll-tax obligations under Malaysian law — computes monthly tax deduction (PCB/MTD) including additional remuneration, EPF / SOCSO / EIS statutory contributions, and benefit-in-kind and perquisite valuation (including ESOS); reviews the employer return (Form E / CP8D) and the EA statement; and runs tax clearance (SPC) for departing and leaving-Malaysia employees with the withholding obligation. The employer carries the liability for under-deduction, so every figure traces to payroll source and ties back, and every rate, ceiling, and PCB-schedule constant is flagged for verification against current LHDN / EPF / PERKESO guidance.",
+  "author": {
+    "name": "Hazli Johar"
+  }
+}

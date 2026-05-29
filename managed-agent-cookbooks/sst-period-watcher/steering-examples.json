@@ -1,0 +1,6 @@
+[
+  { "event": "Period-end check: read the indirect-tax config, state the current SST taxable period and the upcoming SST-02 return and payment date", "description": "The standard run, scheduled around each taxable-period end" },
+  { "event": "Bi-monthly run for the configured registrant: confirm the period type and post the SST-02 reminder, red if ≤14 days", "description": "Pinned to one indirect-tax config" },
+  { "event": "Setup check: indirect-tax not yet configured — post a short 'configure the registration profile' note rather than a false all-clear", "description": "Unconfigured path — never goes silent" },
+  { "event": "Dry run before scheduling: assemble and print the reminder for review, do not post", "description": "Validation pass — runs the reader and validate.py, skips the orchestrator post" }
+]

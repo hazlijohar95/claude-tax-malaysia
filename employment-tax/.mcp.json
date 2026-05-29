@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "Google Drive": {
+      "type": "http",
+      "url": "https://drivemcp.googleapis.com/mcp/v1",
+      "title": "Google Drive",
+      "description": "Search, read, and fetch source documents — payroll registers, payslips, EA / EC forms, TP1 / TP3 declarations, benefit and ESOS records, and prior CP39 / Form E filings — from Google Drive."
+    },
+    "Slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "title": "Slack",
+      "description": "Search messages, read channels, post remittance and filing-deadline alerts and review summaries to your workspace."
+    }
+  },
+  "recommendedCategories": [
+    "documents",
+    "accounting",
+    "payroll",
+    "chat",
+    "spreadsheets",
+    "tax-research"
+  ]
+}

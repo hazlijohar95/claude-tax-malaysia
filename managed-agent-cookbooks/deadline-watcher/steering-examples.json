@@ -1,0 +1,6 @@
+[
+  { "event": "Weekly sweep: read every installed claude-for-tax plugin config and post the filing and payment deadlines inside the 90-day horizon", "description": "Scheduled portfolio sweep — the default Monday-morning run" },
+  { "event": "Corporate-tax only: CP204/CP204A instalment and Form C deadlines for the configured entity, year of assessment from the profile", "description": "Single-plugin run pinned with one --config" },
+  { "event": "Month-end check: surface only red items (controlling deadline ≤14 days) across the corporate-tax, personal-tax, and employment-tax configs", "description": "Near-term red-only sweep ahead of a filing month" },
+  { "event": "Dry run before scheduling: assemble and print the ranked digest for review, do not post", "description": "Validation pass — runs readers and validate.py, skips the orchestrator post" }
+]

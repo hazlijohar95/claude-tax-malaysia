@@ -1,0 +1,8 @@
+{
+  "name": "corporate-tax",
+  "version": "1.0.0",
+  "description": "Builds and reviews company income tax computations against the Income Tax Act 1967, prepares the MFRS 112 / IAS 12 current and deferred tax provision with a deferred-tax proof, reviews the return (Form C) before filing, computes capital allowances, and tracks filing and instalment deadlines — every figure traced to a source document and tied back to the computation.",
+  "author": {
+    "name": "Hazli Johar"
+  }
+}
