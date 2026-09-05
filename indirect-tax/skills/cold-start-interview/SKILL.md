@@ -4,9 +4,16 @@ description: >
   Run the cold-start interview to learn your SST / indirect-tax practice and write
   your practice profile. Use on first use of the plugin, when
   `~/.claude/plugins/config/claude-for-tax/indirect-tax/CLAUDE.md` is missing or still
-  contains template placeholders, or when the user says "set up the plugin", "configure
-  SST", "onboard me". This is the only skill that should run on a fresh install.
+  contains template placeholders, or when the user says "set up SST", "configure
+  SST", "onboard me for SST". This is the only skill that should run on a fresh install.
 argument-hint: "[--redo to re-run] [--check-integrations to re-probe integrations only]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /cold-start-interview
@@ -20,7 +27,7 @@ Meet this team for the first time and learn how *they* treat their supplies — 
 ## Instructions
 
 1. **Check current state** of the config path (exists / paused / placeholder / populated), same logic as any cold-start. Migrate a populated cache config forward if present.
-2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read and confirm if present (skip company questions); create from `references/company-profile-template.md` if absent.
+2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read and confirm if present (skip company questions); create from `${CLAUDE_PLUGIN_ROOT}/references/company-profile-template.md` if absent.
 3. **Install scope check** if cwd is inside a project.
 4. **Fork:** offer 2-minute quick start vs 15-minute full. Wait.
 5. **Run the interview** (below), 2-3 prompts per turn, asking for pastes/files before memory.

@@ -6,6 +6,13 @@ description: >
   matter file current so briefings and the portfolio are accurate. Use for "log an update
   on [matter]", "we got LHDN's reply", "objection filed".
 argument-hint: "<matter-slug> [what happened]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Matter Update
@@ -17,6 +24,8 @@ Keep the matter file current. An append-only `history.md` plus targeted edits to
 ## Precondition
 
 Read the named (or active) matter's `matter.md` and `history.md`. If none active and none named, ask.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

@@ -10,6 +10,13 @@ description: >
   is flagged for verification. Use for "value the company car BIK", "is this allowance taxable",
   "VOLA on the accommodation", "ESOS perquisite", "what goes on the EA form".
 argument-hint: "[employee / year] [the benefit details, ESOS records, or paste them]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # BIK & Perquisites Valuation

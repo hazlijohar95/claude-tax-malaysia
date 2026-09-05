@@ -4,8 +4,15 @@ description: >
   Tune your indirect-tax (SST) practice profile after setup — change a recorded
   taxability position, add an exemption you rely on, update registration status, fix the
   SST-02 calendar, or adjust the reporting standard — without re-running the full
-  cold-start interview. Use for "change my settings", "update my SST positions", "customize the plugin".
+  cold-start interview. Use for "change my SST settings", "update my SST positions", "customize SST".
 argument-hint: "[what to change, in plain English]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /customize

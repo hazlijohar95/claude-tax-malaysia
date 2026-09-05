@@ -6,6 +6,13 @@ description: >
   the assessor's basis, the position and the standard it meets, exposure, deadlines, and
   the recommended path. Use for "brief me on [matter]", "prep for the call on [matter]".
 argument-hint: "<matter-slug>"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Matter Briefing
@@ -17,6 +24,8 @@ Turn a matter file into a brief someone can walk into a call with — no re-read
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` and the active (or named) matter's `matter.md` and `history.md`. If no matter is active and none is named, ask which. Never brief from memory of a prior session — re-read the matter file.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

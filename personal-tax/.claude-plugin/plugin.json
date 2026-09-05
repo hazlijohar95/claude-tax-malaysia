@@ -4,5 +4,14 @@
   "description": "Builds and reviews individual income tax computations under the Income Tax Act 1967 — resident scale vs non-resident treatment, employment income (s.13 salary, BIK, perquisites, ESOS, gratuity), personal reliefs and rebates, the self-assessment return (Form BE / Form B), and filing and instalment deadlines — every figure traced to a source document (EA form, statements) and tied back to the computation, every rate, relief, and threshold flagged for verification against current LHDN guidance.",
   "author": {
     "name": "Hazli Johar"
-  }
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/hazlijohar95/claude-tax-malaysia/tree/main/personal-tax",
+  "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
+  "skills": [
+    "./skills/"
+  ],
+  "agents": [
+    "./agents/"
+  ]
 }

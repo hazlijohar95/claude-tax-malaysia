@@ -4,8 +4,15 @@ description: >
   Track company tax filing and payment deadlines — Form C, CP204 estimate, CP204A
   revisions, monthly instalments, balance of tax — from the deadline calendar in the
   practice profile, with penalty-aware warnings and an annual re-verification prompt.
-  Use for "what's due", "tax deadlines", "CP204 dates", "filing calendar".
+  Use for "what corporate tax is due", "tax deadlines", "CP204 dates", "corporate tax filing calendar".
 argument-hint: "[entity / YA, or 'all'] [--add to record a new obligation]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Deadline Tracker
@@ -17,6 +24,8 @@ The deadlines that carry penalties only help if someone reads them in time. This
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.md` → `## Deadline calendar` and the entity's period end. The calendar dates are the team's recorded understanding, tagged for annual verification — this skill does not assert statutory dates from memory.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

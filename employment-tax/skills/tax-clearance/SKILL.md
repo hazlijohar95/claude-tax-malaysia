@@ -10,6 +10,13 @@ description: >
   leaver", "CP21 for an employee leaving Malaysia", "CP22A cessation", "do we withhold the final
   salary".
 argument-hint: "[employee] [leaving date / departure date, final pay components, employment facts]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Tax Clearance (SPC) & Cessation Notifications

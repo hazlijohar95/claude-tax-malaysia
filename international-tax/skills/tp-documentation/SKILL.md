@@ -7,6 +7,13 @@ description: >
   framing around a benchmarking study. Will NOT manufacture comparables. Use for "TP
   documentation", "Local File", "Master File", "prepare the TP report".
 argument-hint: "[entity / transaction / year] [intercompany agreements + financials + group chart]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Transfer Pricing Documentation
@@ -18,6 +25,8 @@ Produce contemporaneous TP documentation that holds up on audit: the group and e
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/international-tax/CLAUDE.md`. You need the group structure, the intercompany agreement(s) for the transaction(s), and the relevant financials. Confirm the year — documentation must be contemporaneous for the YA `[verify the requirement and deadline]`.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 **Benchmarking gate.** If the documentation needs an arm's-length range and no benchmarking study is provided or connectable, say so up front: "I can build everything except the economic analysis' comparable set — that needs a benchmarking study. I'll structure the search criteria and the comparability factors so the study is targeted, but I will not invent comparables." Proceed with the rest; mark the economic-analysis section as pending the study.
 

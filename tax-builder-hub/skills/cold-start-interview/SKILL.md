@@ -6,6 +6,13 @@ description: >
   preferences. Use on first use, when the hub config is missing or placeholder, or when
   the user says "set up the hub", "configure builder hub".
 argument-hint: "[--redo] [--check-integrations]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /cold-start-interview
@@ -15,7 +22,7 @@ Writes `~/.claude/plugins/config/claude-for-tax/tax-builder-hub/CLAUDE.md`.
 ## Instructions
 
 1. **Check state** of the config path (exists / paused / placeholder / populated); migrate a populated cache config forward if present.
-2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read/confirm if present; create from `references/company-profile-template.md` if absent. The hub is often the first plugin a builder sets up.
+2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read/confirm if present; create from `${CLAUDE_PLUGIN_ROOT}/references/company-profile-template.md` if absent. The hub is often the first plugin a builder sets up.
 3. **Part 0 — Role.** Tax professional / non-professional with adviser access / non-professional. Write it to `## Who's using this` so other tax plugins can read it.
 4. **Integrations.** Probe Slack (✓ only on a successful tool call).
 5. **Practice + tooling.** Practice type, primary jurisdiction (default Malaysia), tooling comfort.

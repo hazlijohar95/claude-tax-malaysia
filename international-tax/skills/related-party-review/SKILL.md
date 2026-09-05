@@ -7,6 +7,13 @@ description: >
   drives everything else. Use for "map our related-party transactions", "which transactions
   need TP docs", "characterise this intercompany transaction".
 argument-hint: "[group chart + financials / intercompany ledgers]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Related-Party Transaction Review
@@ -18,6 +25,8 @@ Build the inventory of controlled transactions — the foundation for documentat
 ## Precondition
 
 Read the profile for the group structure. You need the group chart and the financials / intercompany ledgers. Source every related party and every flow.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

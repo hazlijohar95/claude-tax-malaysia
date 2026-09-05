@@ -5,8 +5,15 @@ description: >
   it's built from, before filing — every figure on the form traced to the computation,
   the reliefs and rebates and PCB credit checked, the residence and assessment-basis
   declarations reviewed, and a filing gate before submission. Use for "review the Form BE",
-  "check the return before we file", "is the individual return ready".
+  "check the Form BE/B before we file", "is the individual return ready".
 argument-hint: "[name / YA] [the Form BE/B draft + the supporting computation]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Return Review (Form BE / Form B)
@@ -20,6 +27,8 @@ A filed return is hard to unwind, and on self-assessment the figures are the tax
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/personal-tax/CLAUDE.md`. You need **both** the Form BE/B draft **and** the supporting computation (and the relief schedule). If you have only the form, say so — you can sanity-check the form against itself but cannot confirm it ties to the computation, which is the point of the review.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 Confirm the **right form**: Form BE (resident, no business income), Form B (resident, business/professional income), Form M (non-resident) `[verify against current LHDN forms]`. Filing the wrong form is a 🔴 finding.
 

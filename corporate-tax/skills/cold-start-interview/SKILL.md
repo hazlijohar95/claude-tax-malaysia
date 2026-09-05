@@ -4,9 +4,16 @@ description: >
   Run the cold-start interview to learn your company income tax practice and write
   your team practice profile. Use on first use of the plugin, when
   `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.md` is missing or still contains template
-  placeholders, or when the user says "set up the plugin", "configure corporate tax",
-  "onboard me", or "let's get started". This is the only skill that should run on a fresh install.
+  placeholders, or when the user says "set up corporate tax", "configure corporate tax",
+  "onboard me for corporate tax", or "get started with corporate tax". This is the only skill that should run on a fresh install.
 argument-hint: "[--redo to re-run on an already-configured plugin] [--check-integrations to re-probe integrations only]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /cold-start-interview
@@ -31,7 +38,7 @@ The user should leave feeling like they just onboarded a sharp new tax senior wh
 
 3. **Check for the shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md`.
    - **Exists:** read it, confirm in one line ("You're [name], [setting], [primary jurisdiction], [framework]. Right? Or say 'update'."), then skip the company questions.
-   - **Doesn't exist:** you're the first plugin set up. After the fork, ask the company questions and write them to the shared profile (template at `references/company-profile-template.md`), then continue with the plugin-specific questions. Tell the user: "I've saved your company profile — other tax plugins will read it and skip these questions."
+   - **Doesn't exist:** you're the first plugin set up. After the fork, ask the company questions and write them to the shared profile (template at `${CLAUDE_PLUGIN_ROOT}/references/company-profile-template.md`), then continue with the plugin-specific questions. Tell the user: "I've saved your company profile — other tax plugins will read it and skip these questions."
 
 4. **Install scope check.** If the working directory is inside a project (not home), flag once that file reads will be limited to that folder; offer to continue or reinstall user-scoped. Skip silently if the cwd is home.
 

@@ -10,6 +10,13 @@ description: >
   Budget. Use for "what reliefs can be claimed", "build the relief schedule", "is this
   deductible as a relief", "s.6A rebate".
 argument-hint: "[name / YA] [the relief receipts / statements, or describe the claims]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Reliefs & Rebates

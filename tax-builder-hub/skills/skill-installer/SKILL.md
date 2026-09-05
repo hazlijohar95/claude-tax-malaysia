@@ -7,6 +7,13 @@ description: >
   never installs past a REFUSE, pins the reviewed version, and logs what landed. Use for "install
   this skill", "add [skill] to my environment", "set up this community skill".
 argument-hint: "[skill path | registry skill id | SKILL.md path or pasted content]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /skill-installer

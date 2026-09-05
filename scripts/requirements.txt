@@ -7,3 +7,7 @@
 #   scripts/lint-tool-scope.py   — least-privilege lint (YAML only)
 jsonschema>=4.0
 PyYAML>=6.0
+
+# Official Agent Skills reference validator (agentskills.io spec).
+# check-conventions.py runs it against every skills/<name>/ directory.
+skills-ref>=0.1.1

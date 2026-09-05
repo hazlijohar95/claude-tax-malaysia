@@ -2,9 +2,16 @@
 name: matter-workspace
 description: >
   Manage controversy matter workspaces — create, list, switch, close, or turn off matters.
-  Controversy work is matter-centric, so this is on by default. Use for "switch matter",
-  "list matters", "close matter", "work at practice level".
+  Controversy work is matter-centric, so this is on by default. Use for "switch tax dispute matter",
+  "list tax dispute matters", "close tax dispute matter", "work at practice level".
 argument-hint: "new <slug> | list | switch <slug> | close <slug> | none"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /matter-workspace

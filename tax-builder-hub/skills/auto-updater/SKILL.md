@@ -6,6 +6,13 @@ description: >
   preference and your go-ahead — fail-closed on regression, never silently updating. Use for
   "check for skill updates", "any updates to my skills", "update [skill]", or on schedule.
 argument-hint: "[skill name, or 'all'] [--check to report only, no prompts]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /auto-updater

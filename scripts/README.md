@@ -12,7 +12,7 @@ pip install -r scripts/requirements.txt
 
 | Script | What it does |
 |---|---|
-| `check-conventions.py` | Whitespace and final newlines, 2-space JSON, skill/agent frontmatter, `/plugin:skill` references that resolve to a real directory, `marketplace.json` matching each `plugin.json`. `--fix-whitespace` applies the whitespace fixes. |
+| `check-conventions.py` | Whitespace and final newlines, 2-space JSON, **Agent Skills spec conformance** (via the spec's own `skills_ref` library) plus house frontmatter rules, `/plugin:skill` references that resolve to a real directory, per-plugin `references/` copies in sync with repo root, `marketplace.json` matching each `plugin.json`. `--fix-whitespace` applies the whitespace fixes. |
 | `check-guardrails.py` | Every plugin's `## Shared guardrails` carries all 12 canonical rules, and its verification-log rule points at its own config path. Pins the rule set without forcing identical prose. |
 | `test-cookbooks.sh` | Hermetic structural test of the managed-agent cookbooks: runs `lint-tool-scope.py`, then checks each orchestrator and reader parses, declares its required fields, and carries a valid JSON Schema. No model needed. |
 | `lint-tool-scope.py` | Least-privilege lint on the cookbook agent YAML: readers are limited to read tools, an orchestrator may add exactly one concrete egress, and no agent may carry `Write`/`Edit`/`Bash`/`WebFetch`/`WebSearch` or a wildcard MCP tool. Also invoked by `test-cookbooks.sh` and the deploy harness. |

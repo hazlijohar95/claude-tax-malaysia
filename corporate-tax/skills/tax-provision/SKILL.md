@@ -8,6 +8,13 @@ description: >
   trial balance. Use for "tax provision", "deferred tax", "ASC 740 / IAS 12 / MFRS 112",
   "tax note", "effective tax rate reconciliation".
 argument-hint: "[entity / period] [computation + accounts + prior-year deferred tax working]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Tax Provision (MFRS 112 / IAS 12)

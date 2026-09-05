@@ -7,6 +7,13 @@ description: >
   and never installs. Use for "what else would help with [task]", "skills related to what I have",
   "is there a skill for [gap]", "what pairs with [installed skill]".
 argument-hint: "[task, installed skill name, or gap to fill]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /related-skills-surfacer

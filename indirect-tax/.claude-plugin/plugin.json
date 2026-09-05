@@ -4,5 +4,11 @@
   "description": "Determines whether a supply is taxable under the Sales Tax Act 2018 and Service Tax Act 2018, checks registration thresholds, reviews the SST-02 return before submission, assesses input-cost and exemption treatment, and runs e-invoicing (MyInvois) readiness checks — calibrated to your industry and group.",
   "author": {
     "name": "Hazli Johar"
-  }
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/hazlijohar95/claude-tax-malaysia/tree/main/indirect-tax",
+  "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
+  "skills": [
+    "./skills/"
+  ]
 }

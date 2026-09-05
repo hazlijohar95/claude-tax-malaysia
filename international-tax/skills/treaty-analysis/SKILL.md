@@ -7,6 +7,13 @@ description: >
   Requires the specific treaty text. Use for "apply the [country] treaty", "is there a PE",
   "does the treaty cover this", "treaty residence".
 argument-hint: "[the situation: parties, countries, income, activities] [the treaty text]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Treaty Analysis
@@ -18,6 +25,8 @@ Work a double tax agreement properly — residence, PE, the governing article, t
 ## Precondition
 
 Read the profile. You need the situation and **the actual treaty text**. If you don't have it, say so first: "Treaty answers depend on the specific treaty's wording, which varies. I need the [country] DTA text to do this properly — paste it or connect a source. I can frame the questions against the OECD Model as a structure, but every conclusion will be tagged `[Model — verify against the actual treaty]`." Do not state treaty conclusions from a generic model as if they were the treaty.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

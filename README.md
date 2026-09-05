@@ -96,6 +96,34 @@ Each plugin directory has the same shape:
 
 **Run the cold-start interview first.** Every other skill reads the practice profile it writes. Skipping it is the single most common reason a skill produces generic output. The interview takes 10–15 minutes per plugin and asks you to point at seed documents (a prior-year tax computation, a signed Form C, a set of accounts, your SST returns — whatever fits). More seed material is better; a **quick start** option gets you productive in 2 minutes and you refine later.
 
+## Using a single skill outside Claude Code
+
+Every skill here is a plain [Agent Skills](https://agentskills.io/specification)
+`SKILL.md`, so a single one can be installed into any agent that reads the
+standard — Cursor, Codex, Copilot, Gemini CLI and others — without the
+marketplace:
+
+```bash
+# with the Skills CLI (installs into whichever agents it detects)
+npx skills add hazlijohar95/claude-tax-malaysia --skill capital-allowances
+
+# or with the GitHub CLI
+gh skill install hazlijohar95/claude-tax-malaysia capital-allowances
+```
+
+**What you get and what you lose.** The computational skills carry their own
+method and their guardrails travel with them, so they work standalone. What does
+*not* travel is everything the plugin runtime provides: the practice profile the
+cold-start interview writes, the MCP connectors, the scheduled `deadline-watcher`
+agents, and the `/plugin:skill` handoffs between skills. A standalone skill will
+say it has no profile and work from generic Malaysian defaults, tagging output
+`[PROVISIONAL — profile not configured]`. If you want the profile-driven
+behaviour, install the plugin.
+
+Skills carry `license`, `compatibility` and `metadata` (author, version,
+jurisdiction) in frontmatter, and CI validates every one against the spec with
+the reference validator.
+
 ## Making it yours
 
 These are reference templates. They get sharper when tuned to how your practice works — and the customization mechanism is the plugin itself.

@@ -9,6 +9,13 @@ description: >
   before installing it, before deploying a first-party skill to your team, or whenever
   the user asks "should I trust this?" or "is this skill well-designed?".
 argument-hint: "[skill path | SKILL.md path | paste content]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /skills-qa

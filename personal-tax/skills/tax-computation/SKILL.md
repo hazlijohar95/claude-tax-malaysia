@@ -11,6 +11,13 @@ description: >
   verification. Use for "do the personal comp", "compute the individual tax",
   "tax computation for [name] YA [year]".
 argument-hint: "[name / YA] [path to EA form, statements, and relief receipts, or paste them]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Tax Computation (Individual — Form BE / Form B)

@@ -4,9 +4,16 @@ description: >
   Run the cold-start interview to learn your international tax / transfer pricing practice
   and write your practice profile. Use on first use, when
   `~/.claude/plugins/config/claude-for-tax/international-tax/CLAUDE.md` is missing or still
-  contains template placeholders, or when the user says "set up the plugin", "configure TP",
-  "onboard me". This is the only skill that should run on a fresh install.
+  contains template placeholders, or when the user says "set up transfer pricing", "configure TP",
+  "onboard me for transfer pricing". This is the only skill that should run on a fresh install.
 argument-hint: "[--redo] [--check-integrations]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /cold-start-interview
@@ -20,7 +27,7 @@ Meet this practice for the first time and learn the *group* it works on — stru
 ## Instructions
 
 1. **Check current state** of the config path; migrate a populated cache config forward if present.
-2. **Shared company profile** — read/confirm if present; create from `references/company-profile-template.md` if absent.
+2. **Shared company profile** — read/confirm if present; create from `${CLAUDE_PLUGIN_ROOT}/references/company-profile-template.md` if absent.
 3. **Install scope check** if cwd is inside a project.
 4. **Fork:** 2-minute quick start vs 15-minute full. Wait.
 5. **Run the interview** (below), 2-3 prompts per turn, asking for the group chart, intercompany agreements, and any prior TP documentation before asking the user to describe from memory.

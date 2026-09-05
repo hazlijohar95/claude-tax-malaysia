@@ -9,6 +9,13 @@ description: >
   rate and section is tagged for verification. Use for "do the tax comp", "compute
   the tax", "tax computation for [entity] YA [year]".
 argument-hint: "[entity / YA] [path to trial balance and accounts, or paste them]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Tax Computation

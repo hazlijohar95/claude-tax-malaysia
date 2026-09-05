@@ -4,5 +4,11 @@
   "description": "Evaluates and installs community tax skills through a trust gate — a Tax Skill Design Framework review, a prompt-injection scan, an allowlist check, version pinning, and an update scanner that fails closed on a security regression. Browsing works against registries you configure; no registry ships with this marketplace.",
   "author": {
     "name": "Hazli Johar"
-  }
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/hazlijohar95/claude-tax-malaysia/tree/main/tax-builder-hub",
+  "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
+  "skills": [
+    "./skills/"
+  ]
 }

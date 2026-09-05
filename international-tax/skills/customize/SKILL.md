@@ -4,8 +4,15 @@ description: >
   Tune your international-tax / transfer pricing practice profile after setup — update the
   group structure, the controlled-transaction inventory, the TP methods applied, treaties in
   play, CbCR/Pillar Two status, or the reporting standard — without re-running the full
-  cold-start interview. Use for "change my settings", "update the group", "customize the plugin".
+  cold-start interview. Use for "change my transfer pricing settings", "update the group", "customize transfer pricing".
 argument-hint: "[what to change, in plain English]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /customize

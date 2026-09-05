@@ -7,6 +7,13 @@ description: >
   manufacture one. Use for "review the benchmarking", "is this arm's length", "check the
   TP method", "review the comparables".
 argument-hint: "[the study / analysis to review] [the related agreements + financials]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Arm's-Length Review
@@ -18,6 +25,8 @@ Pressure-test an arm's-length analysis the way an auditor would. The output tell
 ## Precondition
 
 Read the profile. You need the analysis/study to review and the underlying functional analysis and financials. If the "study" is just an asserted range with no comparable set behind it, say so — that is the finding: there is no study to review.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

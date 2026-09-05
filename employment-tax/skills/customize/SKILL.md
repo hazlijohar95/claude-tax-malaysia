@@ -3,9 +3,16 @@ name: customize
 description: >
   Tune your employment-tax practice profile after setup — change a PCB convention, update a
   contribution category, add a benefit to the PCB-base list, fix a remittance deadline, or adjust
-  house style — without re-running the full cold-start interview. Use for "change my settings",
-  "update my conventions", "customize the plugin".
+  house style — without re-running the full cold-start interview. Use for "change my payroll tax settings",
+  "update my payroll tax conventions", "customize payroll tax".
 argument-hint: "[what to change, in plain English]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /customize

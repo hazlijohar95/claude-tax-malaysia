@@ -7,6 +7,13 @@ description: >
   hands anything you want to add to `/tax-builder-hub:skill-installer`. Use for "what tax skills
   are out there", "browse the registry", "any new skills", "find a skill for [task]".
 argument-hint: "[search term or category, optional] [--new to show only changes since last sync] [--sync to re-read registries]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /registry-browser

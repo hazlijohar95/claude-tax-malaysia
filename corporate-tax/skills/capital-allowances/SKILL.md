@@ -7,6 +7,13 @@ description: >
   and prior-year CA schedule. Every asset traced; every rate and class flagged for
   verification. Use for "capital allowances", "CA schedule", "balancing charge".
 argument-hint: "[entity / YA] [fixed-asset register + prior-year CA schedule]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Capital Allowances (Schedule 3 ITA 1967)
@@ -18,6 +25,8 @@ Produce the CA schedule the computation needs: current-year qualifying expenditu
 ## Precondition
 
 Read the profile. You need the **fixed-asset register** (additions, disposals, descriptions, cost) and the **prior-year CA schedule** (opening residual expenditure and the rates previously applied). Without the prior-year schedule, opening residual expenditure cannot be carried — flag it, don't assume.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

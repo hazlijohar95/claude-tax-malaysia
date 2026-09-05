@@ -4,5 +4,11 @@
   "description": "Prepares transfer pricing documentation (Local File / Master File) against the Malaysian TP Rules and OECD Guidelines, reviews arm's-length method selection and benchmarking, characterises related-party transactions, determines withholding tax and treaty relief on cross-border payments, applies double tax agreements, and screens BEPS Pillar Two (GloBE) applicability — every position flagged for verification, because this area changes fastest.",
   "author": {
     "name": "Hazli Johar"
-  }
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/hazlijohar95/claude-tax-malaysia/tree/main/international-tax",
+  "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
+  "skills": [
+    "./skills/"
+  ]
 }

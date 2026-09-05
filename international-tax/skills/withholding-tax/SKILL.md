@@ -7,6 +7,13 @@ description: >
   treaty in hand. Use for "do we withhold on this payment", "WHT on royalty to [country]",
   "withholding tax rate", "treaty relief".
 argument-hint: "[describe the payment: type, payer, payee, country] [the relevant treaty if available]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Withholding Tax Determination
@@ -18,6 +25,8 @@ Answer "do we withhold, and how much" on a cross-border payment — correctly ch
 ## Precondition
 
 Read the profile. You need the payment details (type, payer, payee, payee's country and residence) and, for treaty relief, **the specific treaty** — WHT treaty rates vary treaty by treaty and cannot be asserted generically.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

@@ -7,6 +7,13 @@ description: >
   filing gate before submission. Use for "review the Form C", "check the return
   before we file", "is the return ready".
 argument-hint: "[entity / YA] [the Form C draft + the supporting computation]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Return Review (Form C)
@@ -20,6 +27,8 @@ A filed return is hard to unwind. This is a pre-filing review — it does not fi
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.md`. You need **both** the Form C draft **and** the supporting tax computation. If you have only the form, say so — you can sanity-check the form against itself but cannot confirm it ties to the computation, which is the point of the review.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

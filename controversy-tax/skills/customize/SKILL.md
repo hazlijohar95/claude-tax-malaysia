@@ -3,9 +3,16 @@ name: customize
 description: >
   Tune your tax controversy practice profile after setup — change the dispute posture,
   update the deadline calendar, adjust the reporting-standard threshold, or fix house
-  submission style — without re-running the full cold-start interview. Use for "change my
-  settings", "update my posture", "customize the plugin".
+  submission style — without re-running the full cold-start interview. Use for "change my tax
+  dispute settings", "update my posture", "customize tax dispute".
 argument-hint: "[what to change, in plain English]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /customize

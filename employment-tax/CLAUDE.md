@@ -7,7 +7,15 @@ User-specific configuration for this plugin lives at a version-independent path 
 
 Rules for every skill, command, and agent in this plugin:
 1. READ configuration from that path. Not from this file.
-2. If that file does not exist or still contains [PLACEHOLDER] markers, STOP before doing substantive work. Say: "This plugin needs setup before it can give you useful output. Run /employment-tax:cold-start-interview — it takes about 10-15 minutes and every command in this plugin depends on it. Without it, outputs will be generic and may not match how your payroll actually works." Do NOT proceed with placeholder or default configuration. The only skills that run without setup are /employment-tax:cold-start-interview itself and any --check-integrations flag.
+2. If that file does not exist or still contains [PLACEHOLDER] markers, do NOT refuse the user's request. Offer the choice, then proceed on their answer:
+
+   > "I don't have your practice profile yet, so I'll work from generic Malaysian defaults. Two options:
+   > - Run `/employment-tax:cold-start-interview` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
+   > - Or say **'provisional'** and I'll answer now against generic Malaysian defaults, tag every output `[PROVISIONAL — profile not configured]`, and flag every rate, threshold and deadline for verification."
+
+   On "provisional", or if the user simply repeats the request, DO the work: a clearly-tagged answer from stated defaults is more useful than a refusal, and the source tags and verification flags already tell the reader what is unverified. Carry the `[PROVISIONAL — profile not configured]` tag on every PCB, contribution, or return check produced this way, and close by offering the interview again. Never present provisional output as matching the user's house conventions, and never silently drop the tag.
+
+   The hard stop is reserved for the irreversible: filing, submitting, remitting, or signing. Those stay gated on an explicit confirmation regardless of profile state (see `## Outputs` and the per-skill gates).
 3. Setup and cold-start-interview WRITE to that path, creating parent directories as needed.
 4. On first run after a plugin update, if a populated CLAUDE.md exists at the old cache path
    (~/.claude/plugins/cache/claude-for-tax/employment-tax/<version>/CLAUDE.md for any version)
@@ -190,7 +198,7 @@ When the user picks an option, do that thing. Don't re-explain the analysis.
 
 > 📊 **See this as a workbook?** I'll build an Excel/HTML view: summary stats (total PCB, employer/employee contributions, headcount, deadlines), a colour-coded per-employee table, a `Sources` sheet with every figure's payroll-register reference, and CHECK cells that tie PCB and contributions back to the payroll register and remittance totals. The reviewer note carries over. In Claude Code I write the file to your outputs folder.
 
-**The format is standardised** — see `references/dashboard-template.md`. For tax, Excel is usually the right surface, and **two rules are non-negotiable: every figure traces to a payroll-register reference, and CHECK cells reconcile to the register and the remittance total.** Apply the formula-injection and HTML-escape defences in the template to any value that came from outside this session.
+**The format is standardised** — see `${CLAUDE_PLUGIN_ROOT}/references/dashboard-template.md`. For tax, Excel is usually the right surface, and **two rules are non-negotiable: every figure traces to a payroll-register reference, and CHECK cells reconcile to the register and the remittance total.** Apply the formula-injection and HTML-escape defences in the template to any value that came from outside this session.
 
 ---
 

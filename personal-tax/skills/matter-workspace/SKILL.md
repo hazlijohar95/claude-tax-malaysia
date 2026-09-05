@@ -3,9 +3,16 @@ name: matter-workspace
 description: >
   Manage per-taxpayer matter workspaces for multi-client individual tax practices —
   create, list, switch, close, or turn off matters. Only relevant for private practice;
-  an individual doing their own one return doesn't need it. Use for "new matter",
-  "switch matter", "list matters", "close matter".
+  an individual doing their own one return doesn't need it. Use for "new personal tax matter",
+  "switch personal tax matter", "list personal tax matters", "close personal tax matter".
 argument-hint: "new <slug> | list | switch <slug> | close <slug> | none"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /matter-workspace

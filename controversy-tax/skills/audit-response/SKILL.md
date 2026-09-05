@@ -7,6 +7,13 @@ description: >
   what to withhold or clarify. Use for "respond to the audit query", "LHDN asked for...",
   "draft the audit reply".
 argument-hint: "<matter-slug> [the audit/query letter, pasted or a file]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Audit Response
@@ -18,6 +25,8 @@ Answer an audit query accurately and no more broadly than it asks. The two failu
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` and the matter's `matter.md`. You need the query letter and access to the source documents it concerns. If the matter isn't open, run `/controversy-tax:matter-intake` first.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

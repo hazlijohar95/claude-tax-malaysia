@@ -10,6 +10,13 @@ description: >
   Use for "work out the employment income", "is this benefit taxable", "BIK / perquisite
   treatment", "gratuity exemption".
 argument-hint: "[name / YA] [the EA/EC form + payroll detail, or paste them]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Employment Income (s.13)

@@ -4,9 +4,16 @@ description: >
   Run the cold-start interview to learn your tax controversy practice and write your
   practice profile. Use on first use of the plugin, when
   `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` is missing or still
-  contains template placeholders, or when the user says "set up the plugin", "configure
-  controversy", "onboard me". This is the only skill that should run on a fresh install.
+  contains template placeholders, or when the user says "set up tax dispute", "configure
+  controversy", "onboard me for tax dispute". This is the only skill that should run on a fresh install.
 argument-hint: "[--redo] [--check-integrations] [--new-matter to set up and immediately open a first matter]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /cold-start-interview
@@ -20,7 +27,7 @@ Meet this controversy practice for the first time and learn how *they* run dispu
 ## Instructions
 
 1. **Check current state** of the config path (exists / paused / placeholder / populated); migrate a populated cache config forward if present.
-2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read/confirm if present; create from `references/company-profile-template.md` if absent.
+2. **Shared company profile** at `~/.claude/plugins/config/claude-for-tax/company-profile.md` — read/confirm if present; create from `${CLAUDE_PLUGIN_ROOT}/references/company-profile-template.md` if absent.
 3. **Install scope check** if cwd is inside a project.
 4. **Fork:** 2-minute quick start vs 15-minute full. Wait.
 5. **Run the interview** (below), 2-3 prompts per turn, asking for pastes/files before memory.

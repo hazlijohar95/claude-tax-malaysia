@@ -10,6 +10,13 @@ description: >
   liable for under-contribution. Use for "compute EPF", "SOCSO and EIS", "statutory deductions",
   "contribution schedule for the payroll".
 argument-hint: "[employee / month, or 'payroll run'] [path to payroll register, or paste it]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Statutory Contributions (EPF / SOCSO / EIS)

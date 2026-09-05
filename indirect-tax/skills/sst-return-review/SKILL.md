@@ -6,6 +6,13 @@ description: >
   reconciled, and a submission gate. Use for "review the SST-02", "check the SST return",
   "is the SST return ready".
 argument-hint: "[taxable period] [SST-02 draft + sales/purchase listing]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # SST-02 Return Review
@@ -17,6 +24,8 @@ Catch SST-02 errors before submission, not after a Customs audit. The return is 
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/indirect-tax/CLAUDE.md`. You need the **SST-02 draft** and the **sales/purchase listing** for the period. With only the form, you can sanity-check it against itself but cannot confirm it ties to the underlying records — which is the point.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

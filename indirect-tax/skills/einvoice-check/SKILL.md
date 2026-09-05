@@ -6,6 +6,13 @@ description: >
   validation portal, and flag what would be rejected. Use for "MyInvois check",
   "e-invoice readiness", "will this invoice validate".
 argument-hint: "[an invoice or invoice template, pasted or a file]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # E-Invoice Readiness Check (MyInvois)
@@ -17,6 +24,8 @@ Catch the fields that cause MyInvois validation rejections before the invoice is
 ## Precondition
 
 Read the profile for the e-invoicing integration status and the business's registration details. The **MyInvois field requirements, code lists, and the phased mandate timeline change** — tag every requirement `[verify against the current IRBM e-Invoice guidelines / SDK]`. Do not assert the current field set or the mandate date for a turnover band from memory; confirm or flag.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

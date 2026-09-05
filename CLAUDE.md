@@ -41,7 +41,8 @@ plugin's `## Shared guardrails` and in the skills themselves.
   skills/<name>/SKILL.md          # one skill per directory
   agents/<name>.md                # subagent definitions (scheduled / event-driven)
   hooks/hooks.json                # hook config (most plugins ship an empty stub)
-references/                       # shared templates (company-profile, dashboard, excel-output workbook recipe)
+  references/                     # copies of the shared templates this plugin cites
+references/                       # CANONICAL shared templates; copied into each plugin (see below)
 managed-agent-cookbooks/          # headless deployable agents (deadline-watcher, sst-period-watcher)
   <cookbook>/orchestrator.yaml    #   read-only orchestrator + one concrete egress (Slack send)
   <cookbook>/readers/*.yaml       #   read-only reader leaves with inline output_schema
@@ -85,8 +86,8 @@ python3 -c "import json,glob; [json.load(open(f)) for f in glob.glob('**/*.json'
 # Managed-agent cookbooks — hermetic (no model needed)
 bash scripts/test-cookbooks.sh
 
-# Repo conventions: whitespace, 2-space JSON, frontmatter, dead /plugin:skill
-# references, marketplace-vs-plugin.json parity
+# Repo conventions: whitespace, 2-space JSON, Agent Skills spec conformance,
+# dead /plugin:skill references, references/ copies in sync, marketplace parity
 python3 scripts/check-conventions.py
 
 # Guardrail coverage: every plugin carries all 12 canonical rules
@@ -98,10 +99,14 @@ request, so a broken one fails CI rather than being discovered by a user.
 
 ### Frontmatter requirements
 
-Every `skills/<name>/SKILL.md` needs `name` and `description`. Every
-`agents/*.md` needs `name` and `description`. Keep skill `description` under
-1024 characters — it is the trigger signal. Mark pure-reference skills
-`user-invocable: false`.
+Every `skills/<name>/SKILL.md` carries `name`, `description`, `license`,
+`compatibility` and `metadata` (author, version, jurisdiction), plus the one
+allowed non-spec field `argument-hint`. `name` must match the directory name and
+`description` must stay under 1024 characters — it is the trigger signal, and it
+should be domain-qualified so it doesn't collide with the same-named skill in
+another plugin. Every `agents/*.md` needs `name` and `description`.
+`check-conventions.py` enforces all of this against the spec; see "Skills follow
+the Agent Skills spec" below.
 
 ### Naming
 
@@ -145,6 +150,51 @@ because the block still reads as complete. `scripts/check-guardrails.py` pins
 the rule set and runs in CI. When you add a guardrail, add it to every plugin
 *and* to `CANONICAL_RULES` in that script; when you reword one, keep its bold
 lead-in recognisable or update the accepted spellings there.
+
+### Skills follow the Agent Skills spec
+
+Every `skills/<name>/SKILL.md` is validated against the open [Agent Skills
+spec](https://agentskills.io/specification) by the spec's own `skills_ref`
+library, run from `scripts/check-conventions.py`. Frontmatter carries `name`,
+`description`, `license`, `compatibility` and `metadata` (author, version,
+jurisdiction).
+
+**One deliberate deviation: `argument-hint`.** It is not a spec field, so the
+reference validator flags it. We keep it because Claude Code reads it and uses
+it to prompt for input when a skill is invoked bare, and moving it under
+`metadata` would lose that — other spec clients ignore fields they don't know.
+`SPEC_DEVIATIONS` in `check-conventions.py` allows exactly this one field; every
+*other* unknown field is still an error. If you ever want a strictly
+spec-clean tree, delete the `argument-hint` lines and empty that tuple.
+
+### Each plugin ships its own copy of the shared templates
+
+A plugin's paths cannot escape its own directory at runtime, so a plugin cannot
+read the repo-root `references/`. Every plugin that cites a template ships a copy
+under `<plugin>/references/` and cites it as
+`${CLAUDE_PLUGIN_ROOT}/references/<file>.md`. **Repo root stays canonical** —
+edit `references/<file>.md`, then copy it into each plugin that ships it.
+`check-conventions.py` fails if a copy drifts or if a citation names a file the
+plugin doesn't ship.
+
+### The profile is progressive, not a gate
+
+A missing or placeholder practice profile does NOT block work. The plugin offers
+the interview or a `provisional` run against generic Malaysian defaults, tags
+every output `[PROVISIONAL — profile not configured]`, and proceeds if the user
+repeats the request. The hard stop is reserved for the irreversible — filing,
+submitting, remitting, signing — which stays gated regardless of profile state.
+Don't reintroduce a blanket refusal: a clearly-tagged provisional answer beats a
+refusal, and the verify tags already say what is unconfirmed.
+
+### Trigger phrases are domain-qualified
+
+Six plugins ship a `customize`, `matter-workspace` and (three of them) a
+`deadline-tracker`. With several installed, a bare "what's due" or "change my
+settings" matches them all. Every quoted trigger phrase in a `description` is
+qualified with its domain ("what corporate tax is due"). A check in
+`check-conventions.py` would be nice here; for now, if you add a phrase, grep the
+other plugins for it first.
 
 ### Jurisdiction default is Malaysia
 

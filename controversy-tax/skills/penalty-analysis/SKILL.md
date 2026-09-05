@@ -7,6 +7,13 @@ description: >
   standard each meets. Use for "penalty analysis", "can we get the penalty reduced",
   "argue for remission", "s.113 penalty".
 argument-hint: "<matter-slug> [the notice / penalty computation]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Penalty Analysis
@@ -18,6 +25,8 @@ Penalties are often the larger number and the more arguable one. This skill pins
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` and the matter's `matter.md`. You need the notice / penalty computation showing the penalty and its stated basis.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

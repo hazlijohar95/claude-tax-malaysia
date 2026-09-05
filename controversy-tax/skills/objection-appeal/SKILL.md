@@ -7,6 +7,13 @@ description: >
   confirmed. Use for "draft the objection", "object to the assessment", "appeal to the SCIT",
   "Form Q".
 argument-hint: "<matter-slug> [--appeal for an SCIT appeal instead of an s.99 objection]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Objection / Appeal
@@ -18,6 +25,8 @@ Turn the assessment review's case theory into a formal objection or appeal — g
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` and the matter's `matter.md`. Ideally `/controversy-tax:assessment-review` has run — if not, say the grounds rest on an un-reviewed assessment and offer to run it first.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## The deadline gate (runs before drafting)
 

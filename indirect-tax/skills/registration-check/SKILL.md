@@ -6,6 +6,13 @@ description: >
   the liability date, and flag the registration deadline. Use for "do we need to register
   for SST", "are we over the SST threshold", "service tax registration".
 argument-hint: "[taxable turnover by supply type / period] [or point at the listing]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Registration Check (SST)
@@ -17,6 +24,8 @@ Tell the business whether — and from when — it must register, based on its t
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/indirect-tax/CLAUDE.md` for current registration status and the taxable groups in play. You need the taxable turnover (by supply type / taxable service group) over the relevant look-back period — from the listing or stated by the user (verify if stated).
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

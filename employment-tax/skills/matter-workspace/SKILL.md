@@ -3,9 +3,16 @@ name: matter-workspace
 description: >
   Manage per-employer matter workspaces for payroll bureaus / multi-employer practices —
   create, list, switch, close, or turn off matters. Only relevant when you run payroll for more
-  than one employer; a single-employer in-house function doesn't need it. Use for "new matter",
-  "switch matter", "list matters", "close matter".
+  than one employer; a single-employer in-house function doesn't need it. Use for "new payroll tax matter",
+  "switch payroll tax matter", "list payroll tax matters", "close payroll tax matter".
 argument-hint: "new <slug> | list | switch <slug> | close <slug> | none"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /matter-workspace

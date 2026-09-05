@@ -7,7 +7,15 @@ User-specific configuration for this plugin lives at a version-independent path 
 
 Rules for every skill, command, and agent in this plugin:
 1. READ configuration from that path. Not from this file.
-2. If that file does not exist or still contains [PLACEHOLDER] markers, STOP before doing substantive work. Say: "This plugin needs setup before it can give you useful output. Run /controversy-tax:cold-start-interview." Do NOT proceed with placeholder configuration. The only skills that run without setup are /controversy-tax:cold-start-interview and any --check-integrations flag.
+2. If that file does not exist or still contains [PLACEHOLDER] markers, do NOT refuse the user's request. Offer the choice, then proceed on their answer:
+
+   > "I don't have your practice profile yet, so I'll work from generic Malaysian defaults. Two options:
+   > - Run `/controversy-tax:cold-start-interview` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
+   > - Or say **'provisional'** and I'll answer now against generic Malaysian defaults, tag every output `[PROVISIONAL — profile not configured]`, and flag every rate, threshold and deadline for verification."
+
+   On "provisional", or if the user simply repeats the request, DO the work: a clearly-tagged answer from stated defaults is more useful than a refusal, and the source tags and verification flags already tell the reader what is unverified. Carry the `[PROVISIONAL — profile not configured]` tag on every analysis or draft produced this way, and close by offering the interview again. Never present provisional output as matching the user's house conventions, and never silently drop the tag.
+
+   The hard stop is reserved for the irreversible: filing, submitting, remitting, or signing. Those stay gated on an explicit confirmation regardless of profile state (see `## Outputs` and the per-skill gates).
 3. Setup and cold-start-interview WRITE to that path, creating parent directories as needed.
 4. On first run after a plugin update, if a populated CLAUDE.md exists at the old cache path but not at the config path, copy it forward before proceeding.
 5. This file is the TEMPLATE. Never write user data here.
@@ -153,7 +161,7 @@ If all green, collapse to one line.
 
 **Before the options, one question:** the second-order thing the checklist didn't prompt (e.g., "is the assessment time-barred — was it raised outside the s.91 window?"; "does responding to this query waive an argument we'd want at appeal?"). Omit if you can't think of a real one.
 
-**Dashboard offer for data-heavy outputs** (a portfolio rollup, a multi-year exposure table, a deadline calendar). Excel/HTML per `references/dashboard-template.md`; every figure carries a source reference and exposure totals tie to the underlying assessments. Apply the formula-injection and HTML-escape defences.
+**Dashboard offer for data-heavy outputs** (a portfolio rollup, a multi-year exposure table, a deadline calendar). Excel/HTML per `${CLAUDE_PLUGIN_ROOT}/references/dashboard-template.md`; every figure carries a source reference and exposure totals tie to the underlying assessments. Apply the formula-injection and HTML-escape defences.
 
 ---
 

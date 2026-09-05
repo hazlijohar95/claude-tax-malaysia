@@ -6,6 +6,13 @@ description: >
   activity. Use for "portfolio status", "what's open", "what deadlines are coming",
   "show me all the matters".
 argument-hint: "[--deadlines to show only the deadline calendar] [--stale to show only stale matters]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Portfolio Status
@@ -17,6 +24,8 @@ The one view of every open dispute: where each stands, what it's worth, what's d
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` `## Open matters` and each matter's `matter.md` for current deadline, stage, and exposure. With cross-matter context off, this is the one skill permitted to read across matters (read-only) to build the rollup.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

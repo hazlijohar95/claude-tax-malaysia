@@ -8,6 +8,13 @@ description: >
   the conclusion meets and flags every authority for verification. Use for "is this
   taxable", "do we charge SST on this", "is this service in scope", "does the exemption apply".
 argument-hint: "[describe the supply: what, to whom, where] [any contract/invoice]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Taxability Determination (SST)

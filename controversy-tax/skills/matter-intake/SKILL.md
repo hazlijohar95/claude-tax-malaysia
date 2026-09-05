@@ -6,6 +6,13 @@ description: >
   then write matter.md and history.md and append to the open-matters index. Use for "open
   a matter", "new audit", "new dispute", "we got an assessment / audit letter".
 argument-hint: "<matter-slug> [the audit letter / notice of assessment, pasted or a file]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Matter Intake
@@ -17,6 +24,8 @@ Open a dispute matter uniformly so nothing is lost and — above all — **the c
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md`. Matter workspaces are ON for this plugin. Take the matter slug from the argument or ask for one.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

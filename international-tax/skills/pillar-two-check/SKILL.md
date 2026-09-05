@@ -7,6 +7,13 @@ description: >
   An applicability SCREEN, not a top-up computation. Use for "are we in Pillar Two",
   "GloBE", "top-up tax", "Pillar Two registration".
 argument-hint: "[group revenue + jurisdictions + entity list]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Pillar Two (GloBE) Applicability Screen
@@ -22,6 +29,8 @@ Tell a group whether Pillar Two reaches it, which entities/jurisdictions are in 
 ## Precondition
 
 Read the profile for group revenue and structure. You need consolidated group revenue (for the threshold), the jurisdictions with group entities, and ideally CbCR data for the ETR read.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

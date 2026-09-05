@@ -4,9 +4,16 @@ description: >
   Track employer payroll-tax deadlines — PCB/CP39 remittance, EPF/SOCSO/EIS remittance, the EA
   statement to employees, Form E + CP8D, and the CP22 / CP22A / CP21 notification windows — from
   the calendar in the practice profile, with penalty-aware warnings and an annual re-verification
-  prompt. Use for "what's due", "payroll tax deadlines", "PCB remittance date", "Form E deadline",
+  prompt. Use for "what payroll tax is due", "payroll tax deadlines", "PCB remittance date", "Form E deadline",
   "when's the EA due".
 argument-hint: "[employer, or 'all'] [--add to record a new obligation]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Deadline Tracker
@@ -20,6 +27,8 @@ The recurring monthly remittances (PCB, EPF/SOCSO/EIS) are the ones most easily 
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/employment-tax/CLAUDE.md` → `## Deadline calendar`. The dates are the team's recorded understanding, tagged for verification — this skill does not assert statutory dates from memory.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 ## Workflow
 

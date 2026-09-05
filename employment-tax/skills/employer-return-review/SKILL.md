@@ -7,6 +7,13 @@ description: >
   and a filing gate. Use for "review Form E", "check the CP8D", "are the EA forms right",
   "employer return before we file".
 argument-hint: "[employer / year] [the Form E + CP8D draft, EA statements, and payroll summary]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # Employer Return Review (Form E / CP8D / EA)
@@ -20,6 +27,8 @@ A filed Form E and issued EA statements are hard to unwind. This is a pre-filing
 ## Precondition
 
 Read `~/.claude/plugins/config/claude-for-tax/employment-tax/CLAUDE.md`. You need the **Form E + CP8D draft**, the **EA statements** (or a sample), and the **payroll summary / register + the year's CP39 totals**. If you have only the form, say so — you can sanity-check it against itself but cannot confirm it ties to the payroll, which is the point.
+
+If the profile is missing or still has `[PLACEHOLDER]` markers, do not refuse: follow the provisional path in the plugin profile — say you're working from generic Malaysian defaults, tag the output `[PROVISIONAL — profile not configured]`, and offer the interview at the end.
 
 Confirm the correct year's form and CP8D layout `[verify against the current LHDN forms]` — the form changes between years.
 

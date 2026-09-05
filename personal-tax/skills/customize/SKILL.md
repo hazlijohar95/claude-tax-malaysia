@@ -4,8 +4,15 @@ description: >
   Tune your personal-tax practice profile after setup — change a convention, add a relief
   to the standard checklist, update the reporting-standard threshold, fix a deadline rule,
   or adjust house style — without re-running the full cold-start interview. Use for "change
-  my settings", "update my conventions", "customize the plugin".
+  my personal tax settings", "update my personal tax conventions", "customize personal tax".
 argument-hint: "[what to change, in plain English]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # /customize

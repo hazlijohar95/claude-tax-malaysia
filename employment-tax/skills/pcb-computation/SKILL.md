@@ -11,6 +11,13 @@ description: >
   verification. Use for "compute PCB", "MTD for [employee]", "PCB on the bonus", "run PCB for
   the payroll".
 argument-hint: "[employee / month, or 'payroll run'] [path to payroll register, TP1/TP3, benefit records, or paste them]"
+license: Apache-2.0
+compatibility: >-
+  Designed for Claude Code (or a client that supports the Agent Skills spec). Reads a practice profile written by this plugin's cold-start interview; without one it runs from generic Malaysian tax defaults and tags output as provisional.
+metadata:
+  author: Hazli Johar
+  version: "1.0.0"
+  jurisdiction: Malaysia
 ---
 
 # PCB / MTD Computation
