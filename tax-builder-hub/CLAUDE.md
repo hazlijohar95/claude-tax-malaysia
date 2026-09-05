@@ -56,6 +56,26 @@ These apply to the hub's own outputs and are the posture it QAs installed skills
 
 **Trust surface.** Any hook, undeclared MCP, Bash without a clear limited purpose, WebFetch to an unrelated URL, writes outside the skill directory, or tax-authority overclaiming (a skill describing itself as giving tax advice or creating privilege) is a finding. See `/tax-builder-hub:skills-qa`.
 
+**Currency trigger.** The hub's own claims about a skill go stale too: a QA verdict, a version pin, a registry listing, and a source's allowlist status are all as-at a date. State the date a verdict was reached, and re-run QA rather than quoting an old verdict when a new version is in front of you. A skill's own currency handling (does it flag rates and deadlines for verification, with the year stated?) is a QA finding, not a stylistic preference.
+
+**Verify user-stated facts before building on them.** When the user states a skill's origin, version, publisher, or that "it's already been reviewed", check it against the file and the install log before relying on it. A skill's own description of itself is a claim, not evidence. Conflicts are flagged `[premise flagged — verify]` before the install proceeds.
+
+**When disagreeing with a cited provision, quote it or decline to characterise it.** If a skill under review cites a section, Public Ruling, or order for a proposition you doubt, and you don't have the text, do not invent a description of what it says. Say "I'd need the actual text — `[provision unretrieved — verify]`" and record it as a finding for the reviewer.
+
+**Pre-flight check before any skill that reads a registry or fetches a listing.** Test whether the configured connector or fetch target actually responds. If it doesn't, say so in the output rather than presenting an empty or partial listing as the full picture. A discovery run that silently saw nothing looks identical to one that found nothing.
+
+**Source tags describe what you actually did.** `[registry listing]` — retrieved from a configured registry this session. `[skill file]` — read from the skill's own files. `[user provided]` — pasted or linked by the user. `[install log]` — from this hub's own record. `[model knowledge — verify]` — **the default** for anything else, including your recollection of a publisher's reputation. `[settled — last confirmed YYYY-MM-DD]` — only with a confirmed date. Tags describe provenance, not confidence.
+
+**Tag vocabulary.** `[verify]` — a factual claim to confirm (a version, a publisher, an authority a skill cites). `[review]` — a judgment call for the person deciding whether to install. Provenance tags only when the item literally appeared in that source this session.
+
+**Destination check.** A QA report names a skill's weaknesses and sometimes its author's mistakes. Before it leaves the firm — posted to a registry, sent to the author, shared in a public channel — flag the destination and offer a version that carries the findings without the internal commentary.
+
+**Cross-skill severity floor.** A downstream skill carries an upstream finding's severity as a FLOOR unless it states why it's lowering it. Scale: 🔴 Blocking / 🟠 High / 🟡 Medium / 🟢 Low; round UP when ambiguous. A REFUSE verdict from `skills-qa` is 🔴 and `skill-installer` cannot lower it.
+
+**File access failures.** Don't fail silently — say what happened, the likely cause, and the fixes. A skill file you could not read has not been QA'd, and must be reported as unread rather than passed.
+
+**Verification log.** Record verified items in `~/.claude/plugins/config/claude-for-tax/tax-builder-hub/verification-log.md`: `[YYYY-MM-DD] [item] verified by [name] against [source] — [verdict]`. Re-use within the currency window. The install log is a separate, append-only record; this log is for facts you checked, not installs you made.
+
 ---
 
 ## Your practice profile
@@ -69,9 +89,11 @@ These apply to the hub's own outputs and are the posture it QAs installed skills
 
 ## Watched registries
 
+*Sources YOU add. No registry ships with this plugin and none is configured by default — `claude-for-tax` neither operates nor bundles one. Until you add a row here, `/tax-builder-hub:registry-browser` has nothing to read, and the hub's useful entry point is `/tax-builder-hub:skills-qa` on a skill file you already have.*
+
 | Registry | URL | Last synced | Update preference |
 |---|---|---|---|
-| [PLACEHOLDER] | | | notify |
+| [PLACEHOLDER — none configured] | | | notify |
 
 ---
 

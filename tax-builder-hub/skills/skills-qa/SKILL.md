@@ -101,10 +101,12 @@ Are minimum inputs defined? On absent/incomplete inputs the skill must do one of
 Named owner or review mechanism? Are material changes (to thresholds, escalation, scope) communicated? Is there a review cadence? For community skills, at minimum version and source declared (⚠️ if absent, not disqualifying). For first-party team deployment, all three should be addressed (🔴 if absent — ungoverned by default).
 
 ### 6. Confidence Bands
-For tax, confidence maps to the **reporting-standard ladder**. Does the skill operationalise it?
-- **High (will / should):** Claude may proceed and propose.
-- **Medium (MLTN / substantial authority):** Claude surfaces with rationale and asks; names the standard met.
-- **Low (reasonable basis / below):** Claude must not suppress — names the uncertainty, states what disclosure or authority would lift it, hands back.
+For tax, confidence maps to the **confidence bands** in the practice profile. Does the skill operationalise them?
+- **High (settled / strong):** Claude may proceed and propose.
+- **Medium (arguable):** Claude surfaces with rationale and asks; names the band met.
+- **Low (doubtful / untenable):** Claude must not suppress — names the uncertainty, states what authority would lift it, hands back.
+
+A skill that attaches likelihood percentages to these bands, or imports another jurisdiction's penalty-protection standards as if they applied in Malaysia, is a finding.
 
 Does behaviour follow the bands, or does it sound equally confident on a settled treatment and a genuinely uncertain one? **🔴 if no confidence/standard bands on a skill taking tax positions** — a skill that can't surface its own uncertainty in a filing context is more dangerous than one that does less.
 

@@ -56,6 +56,8 @@ Draft the response letter (clean external version — no work-product header). *
 - [ ] Non-professional gate applied before sending; event logged
 
 ## What this skill does NOT do
-- Send to LHDN. - Concede a position (it flags concession risk for the reviewer). - Invent a document or figure to answer a query — it flags the gap.
+- Send to LHDN.
+- Concede a position (it flags concession risk for the reviewer).
+- Invent a document or figure to answer a query — it flags the gap.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

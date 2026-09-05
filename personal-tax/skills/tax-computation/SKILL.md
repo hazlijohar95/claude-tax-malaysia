@@ -31,7 +31,7 @@ This skill does not invent numbers. If a figure isn't in a source document in fr
 
 > You haven't configured your practice profile yet — that's how I tailor relief conventions, BIK treatment, reporting standard, and deadlines.
 >
-> - Run `/personal-tax:cold-start-interview` (2 min) to configure, then I'll compute against YOUR conventions.
+> - Run `/personal-tax:cold-start-interview` (2 min, quick start) to configure, then I'll compute against YOUR conventions.
 > - Or say **"provisional"** and I'll compute against generic Malaysian defaults (resident individual, standard relief categories from first principles), tag everything `[PROVISIONAL — configure your profile]`, and flag every rate/cap/threshold for verification.
 
 ## Inputs required

@@ -39,4 +39,6 @@ Daily by default (controversy deadlines are unforgiving). Configurable down to w
 If nothing is due in 45 days, post a short all-clear so people know the sweep ran.
 
 ## What this agent does NOT do
-- Object, appeal, or respond. - Modify any matter. - Assert deadlines as settled — it flags them for verification.
+- Object, appeal, or respond.
+- Modify any matter.
+- Assert deadlines as settled — it flags them for verification.

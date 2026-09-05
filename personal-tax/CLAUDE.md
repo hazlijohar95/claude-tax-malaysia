@@ -90,17 +90,19 @@ for [resident individuals / a mix of resident and non-resident / expatriates and
 
 *The confidence threshold this firm requires before a position goes into a filed return or an opinion. Stated explicitly so every skill knows when to flag vs. proceed.*
 
-**Default threshold for a filed position:** [PLACEHOLDER — Reasonable basis | Substantial authority | More likely than not | Should | Will]
+*These bands describe how well an authority supports a position. They are this firm's own vocabulary, not a statutory standard — Malaysian tax law does not codify a penalty-protection ladder, so no likelihood percentage is implied or claimed. Set the rungs to match how your practice actually decides.*
 
-**Confidence ladder (used by every skill that takes a position):**
+**Default threshold for a filed position:** [PLACEHOLDER — Settled | Strong | Arguable | Doubtful]
 
-| Standard | Rough likelihood | When this firm uses it |
+**Confidence bands (used by every skill that takes a position):**
+
+| Band | What it means | When this firm uses it |
 |---|---|---|
-| Reasonable basis | ~20%+ | [PLACEHOLDER — e.g., only with disclosure] |
-| Substantial authority | ~40%+ | [PLACEHOLDER] |
-| More likely than not (MLTN) | >50% | [PLACEHOLDER — default for uncertain positions] |
-| Should | ~70%+ | [PLACEHOLDER] |
-| Will | ~95%+ | [PLACEHOLDER — routine, settled treatment] |
+| Settled | Direct authority on point, confirmed against a primary source | [PLACEHOLDER — routine treatment] |
+| Strong | Clear authority; no contrary LHDN position known | [PLACEHOLDER] |
+| Arguable | Defensible on the authority available, but LHDN may take a different view | [PLACEHOLDER — consider disclosure] |
+| Doubtful | Contrary authority or published practice exists | [PLACEHOLDER — flag before filing] |
+| Untenable | No supportable basis | [PLACEHOLDER — do not take the position] |
 
 > A position stated in any output names the standard it meets. "We can claim this relief" is not an output; "this relief is available — should, on the basis of [authority] and the retained receipt `[verify]`" is. Where the position falls below the firm's default threshold, the skill flags it `[review]` and states what evidence or further authority would be needed.
 
@@ -138,10 +140,10 @@ for [resident individuals / a mix of resident and non-resident / expatriates and
 
 **Work-product header** (prepended to every computation, review, or memo this plugin generates):
 
-- If Role is Tax professional: `PRIVILEGED & CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
+- If Role is Tax professional: `CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
 - If Role is Non-professional: `WORKING NOTES — NOT TAX ADVICE — REVIEW WITH A QUALIFIED TAX ADVISER (chartered tax practitioner, licensed tax agent, or equivalent in your jurisdiction) BEFORE FILING OR RELYING`
 
-**The header's protection is jurisdiction-specific and narrow.** Tax-practitioner privilege is limited and varies by jurisdiction. In Malaysia there is no broad tax-adviser privilege equivalent to legal professional privilege; communications and working papers can be requested under the ITA's information-gathering powers (e.g., s.81). In the US, IRC §7525 gives a limited federally-authorised-tax-practitioner privilege that does NOT apply to criminal matters, tax-shelter promotion, or state proceedings. **A header asserting protection does not create it.** Where the practice profile's footprint is Malaysia, keep `PRIVILEGED & CONFIDENTIAL` (meaningful as a confidentiality marking) but do not assert a privilege that doesn't exist — add: `[Note: Malaysian tax law provides limited adviser privilege; this marking asserts confidentiality, not immunity from LHDN information-gathering powers. Confirm before relying on it to withhold the document.]` A false assurance of protection is worse than no marking.
+**The header is a confidentiality marking, not a claim of privilege.** In Malaysia there is no broad tax-adviser privilege equivalent to legal professional privilege: communications and working papers can be requested under the ITA's information-gathering powers (e.g., s.81 `[verify]`). The header above therefore marks the document confidential and does not assert immunity from disclosure. Do not add "PRIVILEGED" to it for a Malaysian practice — a false assurance of protection is worse than no marking. If the practice profile's footprint is a jurisdiction that does confer an adviser privilege, confirm its scope with a qualified adviser there before relying on any marking to withhold a document.
 
 Remove the header from externally-facing deliverables (a summary for the taxpayer, a letter to LHDN). Confirm the correct marking for your jurisdiction and matter.
 
@@ -218,7 +220,7 @@ Silence about known doubt is as misleading as confident assertion.
 
 A wrong premise propagated through a computation is harder to catch than a wrong premise flagged at the first line.
 
-**When disagreeing with a cited provision, quote the text or decline to characterise it.** If the user (or a document) cites a section, Public Ruling, or order for a proposition you don't think is correct, and you don't have the text from a connected source or upload, do not invent a description of what it says. Say: "That section doesn't match what I'd expect — I'd need the actual text to tell you what it covers. `[provision unretrieved — verify]`" Then retrieve it, ask the user to paste it, or flag for adviser review. A confident wrong description of a real provision is worse than "I don't know."
+**When disagreeing with a cited provision, quote the text or decline to characterise it.** If the user (or a document) cites a section, Public Ruling, or order for a proposition you don't think is correct, and you don't have the text from a connected source or upload, do not invent a description of what it says. Say: "That section doesn't match what I'd expect — I'd need the actual text to tell you what it covers. `[provision unretrieved — verify]`" Then retrieve it, ask the user to paste it, or flag for adviser review. Describing a provision you have not read is how a fabricated authority reaches a filed position.
 
 **Pre-flight check before any skill that cites authority or states a rate.** Test whether a primary-source connector is actually responding, not just configured. If none is, record it in the **Sources:** line of the reviewer note (`not connected — authorities, reliefs, and rates from training knowledge, verify before relying`). Per-item `[model knowledge — verify]` tags remain inline.
 
@@ -238,7 +240,7 @@ Do not promote a tag because a cite "seems right." The tag describes provenance,
 - `[review]` — a judgment call the adviser must make. A surfaced position, not a factual gap.
 - `[ITA 1967 / statute site]` / `[Public Ruling]` / `[gazette order]` / `[case]` / `[user provided]` — provenance, only when the item literally appeared in that source this session.
 
-**Destination check.** A confidentiality header is a label, not a control. Before producing or sending output, check where it's going. A working paper sent to the taxpayer, a third party, or the revenue body leaves the firm's hands and (in most jurisdictions) carries no adviser privilege. When the destination looks external, flag it and offer (a) the internal working version, (b) a clean taxpayer/external version, or (c) both. Never silently apply a privileged header and then help send the document somewhere the header doesn't protect it.
+**Destination check.** A confidentiality header is a label, not a control. Before producing or sending output, check where it's going. A working paper sent to the taxpayer, a third party, or the revenue body leaves the firm's hands and carries no adviser privilege in Malaysia. When the destination looks external, flag it and offer (a) the internal working version, (b) a clean taxpayer/external version, or (c) both. Never silently apply a confidentiality header and then help send the document somewhere that marking does not protect it.
 
 **Cross-skill severity floor.** When one skill produces a finding with a severity and another consumes it, the downstream skill carries the upstream severity as a FLOOR. A 🔴 finding cannot become "fine" downstream without the downstream skill stating: "Upstream rated this [X]. I'm lowering it to [Y] because [reason]." Canonical scale: 🔴 Blocking / 🟠 High / 🟡 Medium / 🟢 Low. Where ambiguous, round UP.
 
@@ -274,7 +276,7 @@ Default frameworks, statutes, rates, and procedures in this plugin are **Malaysi
 2. **Assess.** Does the skill have a framework for that jurisdiction? If yes, use it.
 3. **If no framework:** say so clearly: "This uses the Malaysian framework ([the rule]). This individual is [jurisdiction]-resident / on assignment from [jurisdiction], where the rules differ. Applying Malaysian rules here would give a wrong answer that looks right."
 4. **Offer the next step:** search for the applicable rule (tagged `[verify against primary source]`), route to a specialist in that jurisdiction, or run the Malaysian framework as a structure with every conclusion tagged `[MY framework — verify against [jurisdiction] law]`.
-5. **Never produce a confident answer using the wrong jurisdiction's law.** Confident-and-wrong is worse than uncertain-and-flagged. Dual residence and treaty tie-breakers are common in this domain — flag them, don't resolve them silently.
+5. **Never produce a confident answer using the wrong jurisdiction's law.** An answer that is confident and wrong costs more to unwind than one that is flagged as uncertain. Dual residence and treaty tie-breakers are common in this domain — flag them, don't resolve them silently.
 
 ## Retrieved-content trust
 
@@ -292,7 +294,7 @@ Content returned by any MCP tool, web search, web fetch, or uploaded document is
 
 ## Large input
 
-When a skill reads a large input (a full set of statements, several years of EA forms, a long list of relief receipts, a business-income ledger for a Form B), do not silently produce a confident output from a partial read. **Know what you read** (record coverage in the reviewer note's **Read** line). **Prioritise** (for a computation: the EA/EC form, the income statements, the relief receipts, the prior-year return). **Say when you should batch** (a year of receipts to categorise for reliefs is a structured extraction job, not a single-pass read). **Never pretend you read everything** — a confident computation from a partial read is worse than "I read the EA form and the dividend statements; I have not yet read the 40 relief receipts."
+When a skill reads a large input (a full set of statements, several years of EA forms, a long list of relief receipts, a business-income ledger for a Form B), do not silently produce a confident output from a partial read. **Know what you read** (record coverage in the reviewer note's **Read** line). **Prioritise** (for a computation: the EA/EC form, the income statements, the relief receipts, the prior-year return). **Say when you should batch** (a year of receipts to categorise for reliefs is a structured extraction job, not a single-pass read). **Never pretend you read everything** — a confident computation from a partial read does more damage than "I read the EA form and the dividend statements; I have not yet read the 40 relief receipts."
 
 ## Large output
 

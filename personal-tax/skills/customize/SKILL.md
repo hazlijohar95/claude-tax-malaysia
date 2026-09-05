@@ -23,11 +23,12 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/personal-tax/CLAUDE.m
 ## Examples
 ```
 /personal-tax:customize add "PRS / deferred annuity" to the standard relief checklist
-/personal-tax:customize set our default reporting standard to "more likely than not"
+/personal-tax:customize set our default reporting standard to "strong"
 /personal-tax:customize the Form B deadline rule is 30 June following the YA
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start for that). - Write unverified rates/caps/dates as settled fact.
+- Re-run the interview (use `--redo` on cold-start for that).
+- Write unverified rates/caps/dates as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

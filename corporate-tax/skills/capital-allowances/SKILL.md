@@ -46,6 +46,7 @@ A per-asset table (Asset | Source ref | QE | Class/rate `[verify]` | IA | AA | B
 - [ ] Opening + additions − allowances − disposals = closing RE (CHECK)
 
 ## What this skill does NOT do
-- Decide whether expenditure qualifies as a settled fact — it flags classification for verification. - Assert Schedule 3 rates from memory.
+- Decide whether expenditure qualifies as a settled fact — it flags classification for verification.
+- Assert Schedule 3 rates from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

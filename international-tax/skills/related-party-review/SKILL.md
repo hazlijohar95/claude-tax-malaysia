@@ -49,6 +49,8 @@ For each: does it require TP documentation (materiality threshold `[verify]`)? D
 - [ ] Documentation and WHT triage applied per transaction
 
 ## What this skill does NOT do
-- Price the transactions (that's documentation + a study). - Assert the relatedness/materiality thresholds from memory. - Decide characterisation silently — it flags the calls.
+- Price the transactions (that's documentation + a study).
+- Assert the relatedness/materiality thresholds from memory.
+- Decide characterisation silently — it flags the calls.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

@@ -62,6 +62,8 @@ State readiness: ready / not ready, with the blocking items. **If Role is Non-pr
 - [ ] Filing gate applied for non-professional role
 
 ## What this skill does NOT do
-- File the return. - Re-derive the computation (run `/personal-tax:tax-computation` for that). - Assert the current form's box numbers from memory.
+- File the return.
+- Re-derive the computation (run `/personal-tax:tax-computation` for that).
+- Assert the current form's box numbers from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

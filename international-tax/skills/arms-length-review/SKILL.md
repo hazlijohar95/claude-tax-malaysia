@@ -49,6 +49,8 @@ Where would LHDN push? Stale comparables, a strained method, an undocumented cha
 - [ ] Range construction tagged for verification against the rules
 
 ## What this skill does NOT do
-- Add or invent comparables. - Bless a range with no study behind it. - Assert the range-construction rules from memory.
+- Add or invent comparables.
+- Bless a range with no study behind it.
+- Assert the range-construction rules from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

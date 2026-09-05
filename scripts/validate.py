@@ -14,7 +14,15 @@ import json
 import sys
 from pathlib import Path
 
-import jsonschema
+try:
+    import jsonschema
+except ModuleNotFoundError:  # actionable message, not a traceback
+    print(
+        "validate.py: missing dependency 'jsonschema'.\n"
+        "  Install it with: pip install -r scripts/requirements.txt",
+        file=sys.stderr,
+    )
+    sys.exit(2)
 
 
 def _load(path: Path):

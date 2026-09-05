@@ -59,6 +59,7 @@ Re-probe connectors; update `## Available integrations`. ✓ only on a successfu
 ```
 
 ## What this skill does NOT do
-- Open a matter by itself (use `--new-matter` or `/controversy-tax:matter-intake`). - Assert objection/appeal deadlines or procedure as fact — it flags every one for verification.
+- Open a matter by itself (use `--new-matter` or `/controversy-tax:matter-intake`).
+- Assert objection/appeal deadlines or procedure as fact — it flags every one for verification.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

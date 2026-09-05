@@ -52,6 +52,8 @@ The treaty outcome, the conditions to claim it, the documentation needed (CoR, f
 - [ ] Conclusion anchored to quoted text, with the standard named
 
 ## What this skill does NOT do
-- State a treaty outcome from a generic model as if it were the treaty. - Assert MLI modifications from memory. - Issue a residence certificate.
+- State a treaty outcome from a generic model as if it were the treaty.
+- Assert MLI modifications from memory.
+- Issue a residence certificate.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

@@ -30,6 +30,7 @@ Only when `## Matter workspaces` in the practice profile has `Enabled: ✓` (set
 - **The opening-balance discipline.** A matter's `matter.md` records brought-forward losses, unabsorbed CA, and residual expenditure **with the source of each** (the agreed assessment or prior filed return). These are the figures the computation trusts; they must be sourced, not asserted.
 
 ## What this skill does NOT do
-- Apply to in-house single-entity setups. - Carry context across matters unless explicitly turned on.
+- Apply to in-house single-entity setups.
+- Carry context across matters unless explicitly turned on.
 
 ## Close with a short confirmation of the new state.

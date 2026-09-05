@@ -49,6 +49,8 @@ The readiness check confirms the invoice *can* validate structurally. Whether th
 - [ ] Tax-treatment correctness explicitly handed off, not silently assumed
 
 ## What this skill does NOT do
-- Submit to MyInvois. - Confirm the tax treatment is correct (that's `taxability-determination`). - Assert the current field set or mandate timeline from memory.
+- Submit to MyInvois.
+- Confirm the tax treatment is correct (that's `taxability-determination`).
+- Assert the current field set or mandate timeline from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

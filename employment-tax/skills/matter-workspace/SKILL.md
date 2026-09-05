@@ -30,6 +30,7 @@ Only when `## Matter workspaces` in the practice profile has `Enabled: ✓` (set
 - **The setup discipline.** A matter's `matter.md` records the employer's PCB method, contribution categories, and pay calendar **with the source of each** (the payroll setup, the contribution election). These are the figures the computations trust; they must be sourced, not assumed — a wrong contribution category on file produces wrong contributions every month.
 
 ## What this skill does NOT do
-- Apply to a single-employer in-house function. - Carry context across employers unless explicitly turned on.
+- Apply to a single-employer in-house function.
+- Carry context across employers unless explicitly turned on.
 
 ## Close with a short confirmation of the new state.

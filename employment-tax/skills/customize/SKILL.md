@@ -23,11 +23,12 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/employment-tax/CLAUDE
 ## Examples
 ```
 /employment-tax:customize add "fixed phone allowance" to the benefits we include in the PCB base
-/employment-tax:customize set our default reporting standard to "more likely than not"
+/employment-tax:customize set our default reporting standard to "strong"
 /employment-tax:customize the PCB/CP39 remittance rule is the 15th of the following month
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start for that). - Write unverified rates/ceilings/dates as settled fact.
+- Re-run the interview (use `--redo` on cold-start for that).
+- Write unverified rates/ceilings/dates as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

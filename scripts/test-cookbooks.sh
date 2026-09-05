@@ -20,6 +20,13 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 fail=0
 
+# Fail with an actionable message rather than a traceback per cookbook.
+if ! python3 -c "import yaml, jsonschema" 2>/dev/null; then
+  echo "test-cookbooks: missing Python dependencies (PyYAML and/or jsonschema)." >&2
+  echo "  Install them with: pip install -r scripts/requirements.txt" >&2
+  exit 2
+fi
+
 echo "test-cookbooks: [1/2] least-privilege lint"
 if ! python3 "$ROOT/scripts/lint-tool-scope.py"; then
   echo "  ✗ tool-scope lint" >&2

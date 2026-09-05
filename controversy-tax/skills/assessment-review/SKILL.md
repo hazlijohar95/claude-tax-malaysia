@@ -31,7 +31,7 @@ Test whether the assessment was raised within the statutory window for the year(
 For each disputed adjustment, recompute the correct figure from the return and source records, traced. Compare to LHDN's figure. State the difference. A figure is never accepted or rejected from memory — it is recomputed from the document.
 
 ### Step 4 — Defensibility per adjustment
-For each adjustment, assess the taxpayer's position and the standard it meets (will/should/MLTN/review), with the authority `[verify]`. Separate the adjustments that are plainly wrong (recompute and they fall away), arguable (a real position, named standard), and likely correct (LHDN has it right — concede candidate).
+For each adjustment, assess the taxpayer's position and the standard it meets (settled / strong / arguable / doubtful), with the authority `[verify]`. Separate the adjustments that are plainly wrong (recompute and they fall away), arguable (a real position, named standard), and likely correct (LHDN has it right — concede candidate).
 
 ### Step 5 — Bottom line and decision input
 Total defensible vs likely-correct exposure. The object/concede recommendation flagged `[review]` for the person with settlement authority, with the deadline restated.
@@ -55,6 +55,8 @@ Total defensible vs likely-correct exposure. The object/concede recommendation f
 - [ ] Object/concede flagged `[review]`, not decided
 
 ## What this skill does NOT do
-- File the objection (that's `objection-appeal`). - Decide whether to object. - Assert the time-bar period or a rate from memory — flags them for verification.
+- File the objection (that's `objection-appeal`).
+- Decide whether to object.
+- Assert the time-bar period or a rate from memory — flags them for verification.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

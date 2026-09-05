@@ -24,10 +24,12 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUD
 ```
 /controversy-tax:customize set our posture to "litigate selectively above RM250k exposure"
 /controversy-tax:customize record the objection window as 30 days from the notice date
-/controversy-tax:customize set our default standard to hold a position at "more likely than not"
+/controversy-tax:customize set our default standard to hold a position at "strong"
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start). - Edit a specific matter (use `/controversy-tax:matter-update`). - Write unverified deadlines as settled fact.
+- Re-run the interview (use `--redo` on cold-start).
+- Edit a specific matter (use `/controversy-tax:matter-update`).
+- Write unverified deadlines as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

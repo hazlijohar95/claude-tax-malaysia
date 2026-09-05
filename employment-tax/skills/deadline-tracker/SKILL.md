@@ -43,6 +43,8 @@ Append a new obligation (e.g., a leaver's CP21 window) to the employer's trackin
 If nothing non-routine is due in 90 days, say so explicitly (and still show the next monthly remittance) so the user knows the tracker ran.
 
 ## What this skill does NOT do
-- Assert statutory deadlines as fact — it computes from recorded rules and flags for verification. - Remit or file anything. - Replace the firm's own payroll calendar; it complements it.
+- Assert statutory deadlines as fact — it computes from recorded rules and flags for verification.
+- Remit or file anything.
+- Replace the firm's own payroll calendar; it complements it.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer the dashboard for a multi-employer calendar.

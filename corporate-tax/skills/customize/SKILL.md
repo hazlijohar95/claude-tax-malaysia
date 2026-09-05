@@ -23,11 +23,12 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.
 ## Examples
 ```
 /corporate-tax:customize add "freight to bring asset to location" to the CA qualifying-expenditure note
-/corporate-tax:customize set our default reporting standard to "more likely than not"
+/corporate-tax:customize set our default reporting standard to "strong"
 /corporate-tax:customize the Form C deadline rule is 7 months after period end
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start for that). - Write unverified rates/dates as settled fact.
+- Re-run the interview (use `--redo` on cold-start for that).
+- Write unverified rates/dates as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

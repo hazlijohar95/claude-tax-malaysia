@@ -61,6 +61,8 @@ State readiness: ready / not ready, with the blocking items. **If Role is Non-pr
 - [ ] Deadlines confirmed for the year; filing gate applied for non-professional role
 
 ## What this skill does NOT do
-- File Form E or issue the EA statements. - Re-derive the PCB (run `/employment-tax:pcb-computation`). - Assert the current form's layout or box numbers from memory.
+- File Form E or issue the EA statements.
+- Re-derive the PCB (run `/employment-tax:pcb-computation`).
+- Assert the current form's layout or box numbers from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

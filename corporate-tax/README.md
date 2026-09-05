@@ -19,7 +19,7 @@ The interview learns your conventions (add-back checklist, CA treatment, carried
 | Command | What it does |
 |---|---|
 | `/corporate-tax:cold-start-interview` | Learn your practice and write the profile (run first) |
-| `/corporate-tax:tax-computation` | Build the computation: PBT → adjusted → statutory → chargeable income → tax payable, every line sourced, six CHECK tie-outs |
+| `/corporate-tax:tax-computation` | Build the computation: PBT → adjusted → statutory → chargeable income → tax payable, every line sourced, five CHECK tie-outs |
 | `/corporate-tax:tax-provision` | MFRS 112 / IAS 12 current + deferred tax, deferred-tax proof, effective-rate reconciliation, disclosure note |
 | `/corporate-tax:capital-allowances` | Schedule 3 CA schedule — QE, IA/AA, balancing adjustments, residual expenditure carried forward |
 | `/corporate-tax:return-review` | Tie the Form C to the computation, check carried-forward balances and credits, review disclosure boxes, filing gate |

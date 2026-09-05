@@ -35,6 +35,7 @@ A one-line confirmation of what was logged and any deadline change — then, onl
 - [ ] Index row updated if stage/deadline/exposure changed
 
 ## What this skill does NOT do
-- Rewrite the matter's history. - Assert a new deadline without flagging it for verification.
+- Rewrite the matter's history.
+- Assert a new deadline without flagging it for verification.
 
 ## Close with a short confirmation; offer the decision tree only if an action now follows.

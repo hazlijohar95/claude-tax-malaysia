@@ -54,6 +54,8 @@ State readiness with blocking items. **If Role is Non-professional**, gate befor
 - [ ] Submission gate applied for non-professional role
 
 ## What this skill does NOT do
-- Submit the return. - Recompute taxability from scratch (use `/indirect-tax:taxability-determination`). - Assert SST-02 field rules or rates from memory.
+- Submit the return.
+- Recompute taxability from scratch (use `/indirect-tax:taxability-determination`).
+- Assert SST-02 field rules or rates from memory.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer the dashboard/workbook for the tie-out.

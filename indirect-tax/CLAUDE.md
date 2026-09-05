@@ -83,15 +83,17 @@ Rules for every skill, command, and agent in this plugin:
 
 ## Reporting standard
 
-**Default threshold before taking a taxability position:** [PLACEHOLDER — Reasonable basis | Substantial authority | More likely than not | Should | Will]
+*These bands describe how well an authority supports a position. They are this firm's own vocabulary, not a statutory standard — Malaysian tax law does not codify a penalty-protection ladder, so no likelihood percentage is implied or claimed. Set the rungs to match how your practice actually decides.*
 
-| Standard | Rough likelihood | When this firm uses it |
+**Default threshold before taking a taxability position:** [PLACEHOLDER — Settled | Strong | Arguable | Doubtful]
+
+| Band | What it means | When this firm uses it |
 |---|---|---|
-| Reasonable basis | ~20%+ | [PLACEHOLDER — only with disclosure / a ruling request] |
-| Substantial authority | ~40%+ | [PLACEHOLDER] |
-| More likely than not | >50% | [PLACEHOLDER — default for uncertain positions] |
-| Should | ~70%+ | [PLACEHOLDER] |
-| Will | ~95%+ | [PLACEHOLDER — settled treatment] |
+| Settled | Direct authority on point, confirmed against a primary source | [PLACEHOLDER — routine treatment] |
+| Strong | Clear authority; no contrary RMCD position known | [PLACEHOLDER] |
+| Arguable | Defensible on the authority available, but RMCD may take a different view | [PLACEHOLDER — consider a ruling request] |
+| Doubtful | Contrary authority or published practice exists | [PLACEHOLDER — flag before filing] |
+| Untenable | No supportable basis | [PLACEHOLDER — do not take the position] |
 
 > Every taxability output names the standard it meets and, where below the firm's threshold, flags it `[review]` with what would be needed (a Customs ruling, a clearer gazette basis).
 
@@ -120,7 +122,7 @@ Rules for every skill, command, and agent in this plugin:
 
 **Work-product header** (prepended to every determination, review, or memo):
 
-- If Role is Tax professional: `PRIVILEGED & CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
+- If Role is Tax professional: `CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
 - If Role is Non-professional: `WORKING NOTES — NOT TAX ADVICE — REVIEW WITH A QUALIFIED TAX ADVISER BEFORE SUBMITTING OR RELYING`
 
 Tax-adviser privilege is limited in Malaysia and asserting a header does not create it; SST records are subject to RMCD information-gathering powers. Keep the header as a confidentiality marking; do not assert immunity that doesn't exist. Remove it from externally-facing deliverables (a client summary, a letter to Customs).

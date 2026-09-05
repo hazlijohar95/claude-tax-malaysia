@@ -59,6 +59,8 @@ Per `## House style`, in Local File / Master File structure, with the work-produ
 - [ ] Contemporaneous-documentation deadline flagged
 
 ## What this skill does NOT do
-- Invent comparables or an arm's-length range. - File the documentation. - Assert the TP Rules or OECD guidance from memory — flags them for verification.
+- Invent comparables or an arm's-length range.
+- File the documentation.
+- Assert the TP Rules or OECD guidance from memory — flags them for verification.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer `/international-tax:arms-length-review` to scrutinise the method/benchmark, or `/international-tax:related-party-review` to characterise transactions.

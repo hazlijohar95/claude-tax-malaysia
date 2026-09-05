@@ -86,7 +86,7 @@ Ask for the firm's standard add-back checklist (paste or file). Then per categor
 - Carried-forward items tracked (unabsorbed losses and the time-limit/shareholding-continuity position, unabsorbed CA, s.44(6) excess) and the **source** of each opening balance.
 - **The one thing** — the check this team never skips.
 
-**Reporting standard.** Ask the firm's default threshold before a position goes into a filed computation (reasonable basis / substantial authority / MLTN / should / will) and when each is used. Write the confidence ladder into the profile.
+**Reporting standard.** Ask the firm's default threshold before a position goes into a filed computation (settled / strong / arguable / doubtful) and when each is used. Write the confidence bands into the profile. These are descriptive bands, not a statutory standard — do not attach likelihood percentages to them.
 
 ### Part 3: Deadline calendar
 

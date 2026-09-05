@@ -87,7 +87,7 @@ Ask for the firm's standard relief checklist (paste or file). Then per area, cap
 - **Tax-credit / instalment conventions** — PCB/MTD read from the EA form, CP500 instalments.
 - **The one thing** — the check this team never skips.
 
-**Reporting standard.** Ask the firm's default threshold before a position goes into a filed return (reasonable basis / substantial authority / MLTN / should / will) and when each is used. Write the confidence ladder into the profile.
+**Reporting standard.** Ask the firm's default threshold before a position goes into a filed return (settled / strong / arguable / doubtful) and when each is used. Write the confidence bands into the profile. These are descriptive bands, not a statutory standard — do not attach likelihood percentages to them.
 
 ### Part 3: Deadline calendar
 

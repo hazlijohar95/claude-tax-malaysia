@@ -49,6 +49,8 @@ Required to register (from [date], deadline [date]) / not required (turnover bel
 - [ ] Uncertain taxability of any supply flagged (it affects the test)
 
 ## What this skill does NOT do
-- Register the business with RMCD. - Assert the threshold or group classification from memory. - Replace a qualified adviser's confirmation on an uncertain liability date.
+- Register the business with RMCD.
+- Assert the threshold or group classification from memory.
+- Replace a qualified adviser's confirmation on an uncertain liability date.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

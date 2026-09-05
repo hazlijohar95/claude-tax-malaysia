@@ -71,15 +71,17 @@ Rules for every skill, command, and agent in this plugin:
 
 ## Reporting standard
 
-**Default threshold for a position taken in documentation or an opinion:** [PLACEHOLDER — Reasonable basis | Substantial authority | More likely than not | Should | Will]
+*These bands describe how well an authority supports a position. They are this firm's own vocabulary, not a statutory standard — Malaysian tax law does not codify a penalty-protection ladder, so no likelihood percentage is implied or claimed. Set the rungs to match how your practice actually decides.*
 
-| Standard | Rough likelihood | When this team uses it |
+**Default threshold for a position taken in documentation or an opinion:** [PLACEHOLDER — Settled | Strong | Arguable | Doubtful]
+
+| Band | What it means | When this team uses it |
 |---|---|---|
-| Reasonable basis | ~20%+ | [PLACEHOLDER — only with disclosure] |
-| Substantial authority | ~40%+ | [PLACEHOLDER] |
-| More likely than not | >50% | [PLACEHOLDER — default for uncertain positions] |
-| Should | ~70%+ | [PLACEHOLDER] |
-| Will | ~95%+ | [PLACEHOLDER — settled treatment] |
+| Settled | Direct authority on point, confirmed against a primary source | [PLACEHOLDER — routine treatment] |
+| Strong | Clear authority; no contrary LHDN position known | [PLACEHOLDER] |
+| Arguable | Defensible on the authority available, but LHDN may take a different view | [PLACEHOLDER — consider disclosure] |
+| Doubtful | Contrary authority or published practice exists | [PLACEHOLDER — flag before filing] |
+| Untenable | No supportable basis | [PLACEHOLDER — do not take the position] |
 
 > **Arm's length is a range, not a point.** A TP conclusion is stated as a range with the chosen point and the reason for it, and names the standard the *method and characterisation* meet — not a single "correct" price. Where the analysis depends on comparables, the conclusion is only as strong as the benchmarking study behind it.
 
@@ -108,7 +110,7 @@ Rules for every skill, command, and agent in this plugin:
 ## Outputs
 
 **Work-product header:**
-- If Role is Tax professional: `PRIVILEGED & CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
+- If Role is Tax professional: `CONFIDENTIAL — TAX ADVISER WORK PRODUCT — PREPARED FOR THE PURPOSE OF TAX ADVICE`
 - If Role is Non-professional: `WORKING NOTES — NOT TAX ADVICE — REVIEW WITH A QUALIFIED TAX / TRANSFER-PRICING ADVISER BEFORE FILING OR RELYING`
 
 Tax-adviser privilege is limited in Malaysia and TP documentation is, by design, prepared to be produced to LHDN on request — it is not a privileged document. Keep the header as a confidentiality marking; do not assert immunity. Remove it from anything filed or shared with the revenue body.

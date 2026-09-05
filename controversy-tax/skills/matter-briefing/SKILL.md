@@ -23,7 +23,7 @@ Read `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md` and the
 1. **Lead with the deadline and the ask.** The controlling deadline (flagged for verification) and the decision this call needs to produce.
 2. **The facts** — a tight chronology, each fact cited to its source document. Flag any fact still unsourced.
 3. **The assessor's basis** — quoted, with the position LHDN is taking and the authority they're relying on (or "not yet pinned").
-4. **Our position** — the argument(s), each tagged with the standard it meets (will/should/MLTN/review) and the authority `[verify]`. Note the weakest link.
+4. **Our position** — the argument(s), each tagged with the standard it meets (settled / strong / arguable / doubtful) and the authority `[verify]`. Note the weakest link.
 5. **Exposure** — tax + penalties, traced; best/worst/likely if the team works that way.
 6. **The path** — the realistic options (respond/negotiate/concede/object/appeal), the recommended one flagged `[review]` for the person with settlement authority, and what each costs in time and risk.
 7. **Open questions** — what's missing before the next step.
@@ -45,6 +45,7 @@ Lead with the reviewer note.
 - [ ] Re-read the matter file; not briefed from memory
 
 ## What this skill does NOT do
-- Decide the path. - Draft the submission (that's `objection-appeal` / `audit-response`).
+- Decide the path.
+- Draft the submission (that's `objection-appeal` / `audit-response`).
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

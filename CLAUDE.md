@@ -46,8 +46,11 @@ managed-agent-cookbooks/          # headless deployable agents (deadline-watcher
   <cookbook>/orchestrator.yaml    #   read-only orchestrator + one concrete egress (Slack send)
   <cookbook>/readers/*.yaml       #   read-only reader leaves with inline output_schema
   <cookbook>/steering-examples.json #  example invocations (scheduled / single-plugin / red-only / dry-run)
-scripts/                          # validate.py, lint-tool-scope.py, test-cookbooks.sh, deploy-managed-agent.sh, orchestrate.py
-.github/workflows/cla.yaml        # CLA Assistant CI
+scripts/                          # validation (check-conventions, check-guardrails, test-cookbooks,
+                                  #   lint-tool-scope), run-time harness (validate.py,
+                                  #   deploy-managed-agent.sh), and orchestrate.py (reference only)
+                                  #   — see scripts/README.md
+.github/workflows/                # cla.yaml (CLA) + validate.yaml (the checks below)
 CONTRIBUTING.md / CODE_OF_CONDUCT.md / CONNECTORS.md / CLA.md   # governance
 ```
 
@@ -63,6 +66,14 @@ handoffs (closed-schema intents, target allowlist, data-frame wrapping, audit lo
 
 ## Validation — run before committing
 
+The Python checks need two libraries. Install them once:
+
+```bash
+pip install -r scripts/requirements.txt
+```
+
+Then:
+
 ```bash
 # Per-plugin + marketplace schema validation (if claude CLI is available)
 claude plugin validate .claude-plugin/marketplace.json
@@ -73,7 +84,17 @@ python3 -c "import json,glob; [json.load(open(f)) for f in glob.glob('**/*.json'
 
 # Managed-agent cookbooks — hermetic (no model needed)
 bash scripts/test-cookbooks.sh
+
+# Repo conventions: whitespace, 2-space JSON, frontmatter, dead /plugin:skill
+# references, marketplace-vs-plugin.json parity
+python3 scripts/check-conventions.py
+
+# Guardrail coverage: every plugin carries all 12 canonical rules
+python3 scripts/check-guardrails.py
 ```
+
+`.github/workflows/validate.yaml` runs the last four on every push and pull
+request, so a broken one fails CI rather than being discovered by a user.
 
 ### Frontmatter requirements
 
@@ -107,7 +128,23 @@ are the point.
 Every plugin's `CLAUDE.md` carries the full `## Shared guardrails` block. It is
 intentionally duplicated per plugin (so each plugin is self-contained) and is
 the source of truth — when a skill's text conflicts with it, the guardrails
-win. When you change a guardrail, change it in every plugin.
+win.
+
+**What is shared is the rule SET, not the prose.** All twelve rules appear in
+every plugin: figures-trace, no-silent-supplement, currency-trigger,
+verify-user-stated, quote-or-decline, pre-flight, source-tags, tag-vocabulary,
+destination-check, severity-floor, file-access, verification-log. Each plugin
+states them in its own domain's nouns — SST gazette orders in `indirect-tax`,
+treaty texts and comparables in `international-tax`, the matter file in
+`controversy-tax` — and some plugins add a domain rule of their own (never
+fabricate comparables; the employer carries the under-deduction liability).
+Some blocks are consequently longer than others, and that is fine.
+
+What is NOT fine is a plugin losing a rule during a copy, which is invisible
+because the block still reads as complete. `scripts/check-guardrails.py` pins
+the rule set and runs in CI. When you add a guardrail, add it to every plugin
+*and* to `CANONICAL_RULES` in that script; when you reword one, keep its bold
+lead-in recognisable or update the accepted spellings there.
 
 ### Jurisdiction default is Malaysia
 

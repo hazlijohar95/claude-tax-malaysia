@@ -24,6 +24,8 @@ Writes `~/.claude/plugins/config/claude-for-tax/tax-builder-hub/CLAUDE.md`.
 8. **Write** the config using `${CLAUDE_PLUGIN_ROOT}/CLAUDE.md` as scaffold; summarise.
 
 ## What this skill does NOT do
-- Install anything (that's `/tax-builder-hub:skill-installer`). - Override an installed skill's own headers or guardrails. - Allowlist a source the user didn't explicitly name.
+- Install anything (that's `/tax-builder-hub:skill-installer`).
+- Override an installed skill's own headers or guardrails.
+- Allowlist a source the user didn't explicitly name.
 
 ## Close with a short summary and a pointer to browse (`/tax-builder-hub:registry-browser`) or evaluate a skill (`/tax-builder-hub:skills-qa`).

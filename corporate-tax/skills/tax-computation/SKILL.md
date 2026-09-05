@@ -29,7 +29,7 @@ This skill does not invent numbers. If a figure isn't in a source document in fr
 
 > You haven't configured your practice profile yet — that's how I tailor add-back conventions, CA treatment, reporting standard, and deadlines.
 >
-> - Run `/corporate-tax:cold-start-interview` (2 min) to configure, then I'll compute against YOUR conventions.
+> - Run `/corporate-tax:cold-start-interview` (2 min, quick start) to configure, then I'll compute against YOUR conventions.
 > - Or say **"provisional"** and I'll compute against generic Malaysian defaults (resident company, standard add-backs from first principles), tag everything `[PROVISIONAL — configure your profile]`, and flag every rate/threshold for verification.
 
 ## Inputs required
@@ -62,7 +62,7 @@ Work through the source map. For each adjustment produce:
 Source: [TB code / accounts note]
 Reason: [why — e.g., "depreciation: non-deductible; CA claimed separately"]
 Authority: [s.33 / s.39(1)(l) entertainment / Schedule 3 / Public Ruling X] `[model knowledge — verify]`
-Standard met: [will / should / MLTN / review] — [only where the treatment is a judgment call]
+Standard met: [settled / strong / arguable / doubtful] — [only where the treatment is a judgment call]
 ```
 
 - **Always run the team's standard add-back checklist** from the profile (depreciation, non-deductible provisions, s.39 restrictions, donations, fines/penalties, leave passage, etc.). A clean list still states "checked, none applicable."
@@ -151,7 +151,7 @@ If a document store is connected, offer to pull the TB/accounts/PY computation b
 
 - [ ] Profile loaded and conventions applied — not generic positions
 - [ ] Every figure has a source reference; none typed from memory
-- [ ] All six CHECKs run and stated; output not presented as final if any fails
+- [ ] All five CHECKs run and stated; output not presented as final if any fails
 - [ ] Every rate/section/threshold tagged for verification with the YA stated
 - [ ] Judgment calls flagged `[review]` with competing treatments, not silently resolved
 - [ ] Brought-forward balances traced to the prior computation, not the management figure

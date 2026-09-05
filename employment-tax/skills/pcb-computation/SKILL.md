@@ -31,7 +31,7 @@ This skill does not invent the PCB formula constants, relief amounts, or rates. 
 
 > You haven't configured your practice profile yet — that's how I tailor your PCB method, employee categories, which benefits go into the base, and your contribution setup.
 >
-> - Run `/employment-tax:cold-start-interview` (2 min) to configure, then I'll compute against YOUR conventions.
+> - Run `/employment-tax:cold-start-interview` (2 min, quick start) to configure, then I'll compute against YOUR conventions.
 > - Or say **"provisional"** and I'll compute against the generic Malaysian PCB structure, tag everything `[PROVISIONAL — configure your profile]`, and flag every formula constant, relief, and rate for verification.
 
 ## Inputs required

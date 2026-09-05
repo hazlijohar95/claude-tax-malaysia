@@ -57,6 +57,8 @@ If in scope: the registration, notification, and GloBE Information Return obliga
 - [ ] Obligations and the specialist hand-off stated
 
 ## What this skill does NOT do
-- Compute the GloBE top-up tax (this is a screen; the computation is a separate specialist exercise). - Assert Pillar Two thresholds, rates, safe-harbour conditions, or effective dates from memory. - Conclude in/out of scope without flagging that currency must be confirmed.
+- Compute the GloBE top-up tax (this is a screen; the computation is a separate specialist exercise).
+- Assert Pillar Two thresholds, rates, safe-harbour conditions, or effective dates from memory.
+- Conclude in/out of scope without flagging that currency must be confirmed.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

@@ -24,10 +24,11 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/indirect-tax/CLAUDE.m
 ```
 /indirect-tax:customize record that we rely on the intra-group B2B service-tax exemption
 /indirect-tax:customize set our taxable period to bi-monthly
-/indirect-tax:customize set our default reporting standard to "more likely than not"
+/indirect-tax:customize set our default reporting standard to "strong"
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start). - Write unverified rates/groups/dates as settled fact.
+- Re-run the interview (use `--redo` on cold-start).
+- Write unverified rates/groups/dates as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

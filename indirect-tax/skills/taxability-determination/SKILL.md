@@ -39,14 +39,14 @@ State the classification and the basis, tagged. Where the business has a recorde
 State the rate for the period `[rate — verify per the current rate order]`. Check any exemption the business relies on (raw-material exemption, intra-group / B2B service-tax exemption, professional-services exemption) and its **conditions** — an exemption with unmet conditions is not an exemption. Flag condition-dependence `[review]`.
 
 ### Step 4 — Conclusion with the standard
-State: taxable / exempt / out of scope, the rate if taxable, and **the reporting standard the conclusion meets** (will / should / MLTN / review). Where it's below the firm's threshold, flag `[review]` and say what would lift it (a Customs ruling, a clearer gazette basis). Where the place of supply, the recipient, or the classification is genuinely uncertain, surface both treatments — don't pick one silently.
+State: taxable / exempt / out of scope, the rate if taxable, and **the reporting standard the conclusion meets** (settled / strong / arguable / doubtful). Where it's below the firm's threshold, flag `[review]` and say what would lift it (a Customs ruling, a clearer gazette basis). Where the place of supply, the recipient, or the classification is genuinely uncertain, surface both treatments — don't pick one silently.
 
 ## Output format
 
 ```
 [WORK-PRODUCT HEADER]
 # Taxability: [the supply] — [period]
-## Bottom line — [Taxable at X% / Exempt (condition: …) / Out of scope]. Standard: [will/should/MLTN/review].
+## Bottom line — [Taxable at X% / Exempt (condition: …) / Out of scope]. Standard: [settled / strong / arguable / doubtful].
 ## How I got there — scope → classification → rate → exemption, each with basis `[verify]`
 ## What would change the answer — [the fact(s) the conclusion turns on]
 ## Open items — [`[review]` judgment calls, if any]
@@ -62,6 +62,8 @@ Size it down for a clear case: a short paragraph with the one caveat that matter
 - [ ] Every authority/rate/group tagged for verification
 
 ## What this skill does NOT do
-- Assert taxable groups, rates, or exemptions as settled fact — it flags them. - Issue or substitute for a Customs ruling. - Replace a qualified adviser's review on an uncertain position.
+- Assert taxable groups, rates, or exemptions as settled fact — it flags them.
+- Issue or substitute for a Customs ruling.
+- Replace a qualified adviser's review on an uncertain position.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs` — offer to draft a determination memo, a ruling-request, or feed the result into `/indirect-tax:sst-return-review`.

@@ -30,6 +30,7 @@ Only when `## Matter workspaces` in the practice profile has `Enabled: ✓` (set
 - **No comparables in the matter file.** A matter records the group, the transactions, and the methods — not benchmarking results, which live in the study and are re-run for currency.
 
 ## What this skill does NOT do
-- Apply to in-house single-group setups. - Carry context across matters unless turned on.
+- Apply to in-house single-group setups.
+- Carry context across matters unless turned on.
 
 ## Close with a short confirmation of the new state.

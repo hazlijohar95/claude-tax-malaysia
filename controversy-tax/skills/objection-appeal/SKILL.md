@@ -61,6 +61,8 @@ Per `## House style`: the form/structure for an objection or Form Q, the stateme
 - [ ] Non-professional filing gate applied; event + new deadline logged
 
 ## What this skill does NOT do
-- File with LHDN/SCIT. - Proceed without the deadline confirmed. - Cite an authority it didn't retrieve or that the user didn't provide.
+- File with LHDN/SCIT.
+- Proceed without the deadline confirmed.
+- Cite an authority it didn't retrieve or that the user didn't provide.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

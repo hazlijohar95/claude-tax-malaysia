@@ -13,6 +13,8 @@ argument-hint: "[search term or category, optional] [--new to show only changes 
 
 Discovery only. Lists and filters skills from the registries in your hub config. It does not install, does not run code, and does not trust what a listing says about itself.
 
+**There is no default registry.** This repo does not ship or operate one, so this skill has nothing to browse until the user has added a source to `## Watched registries` (a URL, a connector, or a pasted listing). If the table is empty, say so plainly and offer the alternatives — QA a skill file they already have, or paste a listing — rather than implying a catalogue exists somewhere and could not be reached.
+
 ## Precondition: load the hub config
 
 Read `~/.claude/plugins/config/claude-for-tax/tax-builder-hub/CLAUDE.md`. If missing or placeholder, redirect to `/tax-builder-hub:cold-start-interview` — there are no watched registries to browse yet. Read:

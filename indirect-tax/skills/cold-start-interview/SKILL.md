@@ -59,6 +59,7 @@ Re-probe connectors; update `## Available integrations`. ✓ only on a successfu
 ```
 
 ## What this skill does NOT do
-- Decide the business's positions — it records the ones they give it. - Assert SST rates, groups, thresholds, or deadlines as fact — it flags every one for verification.
+- Decide the business's positions — it records the ones they give it.
+- Assert SST rates, groups, thresholds, or deadlines as fact — it flags every one for verification.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

@@ -24,10 +24,12 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/international-tax/CLA
 ```
 /international-tax:customize add an intercompany financing transaction (loan from parent in Singapore)
 /international-tax:customize record that we screened in scope for Pillar Two for the group
-/international-tax:customize set our default standard to "more likely than not"
+/international-tax:customize set our default standard to "strong"
 ```
 
 ## What this skill does NOT do
-- Re-run the interview (use `--redo` on cold-start). - Record comparables/ranges (those come from a study). - Write unverified treaty rates or Pillar Two dates as settled fact.
+- Re-run the interview (use `--redo` on cold-start).
+- Record comparables/ranges (those come from a study).
+- Write unverified treaty rates or Pillar Two dates as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

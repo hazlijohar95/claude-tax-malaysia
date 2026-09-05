@@ -2,7 +2,7 @@
 
 Reference agents, skills, and data connectors for the tax workflows we see most — corporate income tax and provision, indirect tax (SST/VAT/GST), tax controversy and audit defence, and transfer pricing and international tax. Built **Malaysia-first**, with a **verify-don't-assume** posture and a jurisdiction-recognition layer for everything else.
 
-> **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in 60 seconds. This README is the full reference.
+> **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in about a minute, then a 2-minute setup. This README is the full reference.
 
 This repo is modelled on [`anthropics/claude-for-legal`](https://github.com/anthropics/claude-for-legal): same architecture, same robustness spine, the legal nouns swapped for tax nouns. Install it as a [Claude Cowork](https://claude.com/product/cowork) or [Claude Code](https://claude.com/product/claude-code) plugin.
 
@@ -18,7 +18,7 @@ The thing worth copying from `claude-for-legal` is not its legal content — it'
 - **Cold-start interview → practice profile.** Nothing substantive runs until the plugin interviews you and writes `~/.claude/plugins/config/claude-for-tax/<plugin>/CLAUDE.md`. Every skill reads it first. Generic output is treated as a failure, not a default.
 - **Source attribution = provenance, not confidence.** `[ITA 1967 / statute site]`, `[Public Ruling]`, `[gazette order]`, `[LHDN/RMCD site]`, `[case]`, `[user provided]`, `[model knowledge — verify]`. A tag describes where a cite came from this session, never how confident the model feels.
 - **No silent supplement (three values).** Supplement-with-a-flag, stop-and-ask, or flag-but-don't-use. Plus a **currency trigger**: if a Budget/Finance Act could have changed it, search or ask before relying on memory.
-- **Reporting-standard confidence bands.** Reasonable basis → substantial authority → more likely than not → should → will. A position is stated with the standard it meets, not asserted flat.
+- **Confidence bands.** Settled → strong → arguable → doubtful → untenable. A position is stated with the band it meets, not asserted flat. The bands describe how well authority supports a position; they are firm vocabulary, not a statutory standard, and carry no likelihood percentage.
 - **Figures trace and tie.** Every amount carries a source reference; every computation carries CHECK cells reconciling to the trial balance / accounts / return total. (This is the discipline tax demands that legal only gestures at.)
 - **The recoverable-error posture.** Uncertain subjective call → flag `[review]` inline for the adviser, don't silently decide. Under-flagging is a one-way door; over-flagging is a two-way door closed in 30 seconds.
 - **Reviewer note + decision tree** on every deliverable; **deadline awareness** (filing dates, instalments, statute of limitations) with penalty-aware caution; **jurisdiction recognition**; **retrieved-content-is-data**; **proportionality**; a **verification log**.
@@ -34,7 +34,7 @@ The thing worth copying from `claude-for-legal` is not its legal content — it'
 | **[international-tax](./international-tax)** | Transfer pricing documentation (Local/Master File), arm's-length review, related-party characterisation, cross-border withholding and treaty analysis, and BEPS Pillar Two screening. Never fabricates comparables; treats arm's length as a range, not a point. |
 | **[personal-tax](./personal-tax)** | Individual income tax computation (residence-first → Form BE/B), employment income (s.13 salary, BIK/perquisites, ESOS, gratuity), personal reliefs and rebates (capped and evidenced, s.6A and zakat, joint-vs-separate assessment), return review, and deadlines. The employee side. |
 | **[employment-tax](./employment-tax)** | The employer's payroll-tax obligations — monthly tax deduction (PCB/MTD, incl. additional remuneration), EPF/SOCSO/EIS contributions, BIK/VOLA/ESOS valuation, Form E / CP8D / EA review, and tax clearance (SPC) for leavers. The employer carries the liability, so under-deduction is the watched error. The employer side. |
-| **[tax-builder-hub](./tax-builder-hub)** | The full discover → QA → install → update lifecycle for community tax skills: registry browser, the Tax Skill Design Framework review, an install trust gate (QA + allowlist + version pinning; no install past REFUSE), and an auto-updater that re-scans every new version and fails closed on regression. |
+| **[tax-builder-hub](./tax-builder-hub)** | The QA → install → update trust layer for community tax skills: the Tax Skill Design Framework review, a prompt-injection scan, an install gate (QA + allowlist + version pinning; no install past REFUSE), and an auto-updater that re-scans every new version and fails closed on regression. Browsing works against registries you configure — **no registry ships with this repo**, so `skills-qa` on a skill file you already have is the entry point. |
 
 ### Headless agents
 
@@ -54,8 +54,8 @@ employment-tax/           # employer payroll tax — PCB/MTD, EPF/SOCSO/EIS, BIK
 tax-builder-hub/          # community tax skill discover/QA/install/update with a trust gate
 references/               # shared templates (company-profile, dashboard, excel-output workbook recipe)
 managed-agent-cookbooks/  # headless watchers — read-only orchestrator + schema-validated readers
-scripts/                  # validate.py, lint-tool-scope.py, test-cookbooks.sh, deploy-managed-agent.sh, orchestrate.py
-.github/workflows/        # CLA Assistant CI
+scripts/                  # validation + deploy harness — see scripts/README.md
+.github/workflows/        # CLA Assistant + validation CI
 .claude-plugin/
   marketplace.json        # plugin registry
 ```

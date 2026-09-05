@@ -47,6 +47,7 @@ A short confirmation: matter opened, the controlling deadline (flagged for verif
 - [ ] matter.md + history.md written; index updated; matter set active
 
 ## What this skill does NOT do
-- Object, appeal, or respond — it opens the matter (use the work skills next). - Assert the deadline as settled — it flags it for verification against the notice and current procedure.
+- Object, appeal, or respond — it opens the matter (use the work skills next).
+- Assert the deadline as settled — it flags it for verification against the notice and current procedure.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

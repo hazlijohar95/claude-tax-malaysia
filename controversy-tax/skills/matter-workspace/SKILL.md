@@ -29,6 +29,7 @@ Matter workspaces are ON by default for this plugin — each audit or dispute is
 - **Deadlines live in the matter.** A matter's `matter.md` carries its controlling deadline (flagged for verification); `history.md` is append-only. Closing a matter retains both.
 
 ## What this skill does NOT do
-- Open a matter properly (use `/controversy-tax:matter-intake` — it captures the deadline first). - Delete a matter's history.
+- Open a matter properly (use `/controversy-tax:matter-intake` — it captures the deadline first).
+- Delete a matter's history.
 
 ## Close with a short confirmation of the new state.

@@ -58,6 +58,8 @@ Re-probe connectors; update `## Available integrations`. ✓ only on a successfu
 ```
 
 ## What this skill does NOT do
-- Decide the group's TP methods or positions — it records the ones the team gives it. - Record comparables or arm's-length ranges (those come from a study, not setup). - Assert treaty rates, thresholds, or Pillar Two rules as fact.
+- Decide the group's TP methods or positions — it records the ones the team gives it.
+- Record comparables or arm's-length ranges (those come from a study, not setup).
+- Assert treaty rates, thresholds, or Pillar Two rules as fact.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

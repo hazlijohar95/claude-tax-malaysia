@@ -61,7 +61,7 @@ Rules for every skill, command, and agent in this plugin:
 *How THIS practice approaches disputes. Every work skill reads it.*
 
 **Risk appetite in dispute:** [PLACEHOLDER — settle early / hold the line / litigate selectively]
-**When we settle vs. proceed:** [PLACEHOLDER — the team's threshold — e.g., "settle below RM[X] exposure if the position is < MLTN; proceed where the position is 'should' or better and the amount justifies it"]
+**When we settle vs. proceed:** [PLACEHOLDER — the team's threshold — e.g., "settle below RM[X] exposure if the position is no better than arguable; proceed where the position is strong or better and the amount justifies it"]
 **House brief / submission style:** [PLACEHOLDER — tone, structure, length the team uses for objections and submissions]
 **Outside counsel / advocate:** [PLACEHOLDER — when a matter goes to a tax litigator / who]
 **The one thing:** [PLACEHOLDER — the check this team never skips on a new matter — e.g., "confirm the objection deadline and diarise it before anything else".]
@@ -70,17 +70,19 @@ Rules for every skill, command, and agent in this plugin:
 
 ## Reporting standard
 
-*The confidence ladder, applied to positions in dispute — what standard a position must meet for the team to hold it rather than concede.*
+*The confidence bands, applied to positions in dispute — what standard a position must meet for the team to hold it rather than concede.*
 
-**Default threshold to hold a position in dispute:** [PLACEHOLDER — Reasonable basis | Substantial authority | More likely than not | Should | Will]
+*These bands describe how well an authority supports a position. They are this firm's own vocabulary, not a statutory standard — Malaysian tax law does not codify a penalty-protection ladder, so no likelihood percentage is implied or claimed. Set the rungs to match how your practice actually decides.*
 
-| Standard | Rough likelihood | When this practice holds vs. concedes |
+**Default threshold to hold a position in dispute:** [PLACEHOLDER — Settled | Strong | Arguable | Doubtful]
+
+| Band | What it means | When this practice uses it |
 |---|---|---|
-| Reasonable basis | ~20%+ | [PLACEHOLDER — concede unless amount is small / nuisance] |
-| Substantial authority | ~40%+ | [PLACEHOLDER] |
-| More likely than not | >50% | [PLACEHOLDER — default to defend] |
-| Should | ~70%+ | [PLACEHOLDER — defend through appeal] |
-| Will | ~95%+ | [PLACEHOLDER — assessor is plainly wrong] |
+| Settled | Direct authority on point, confirmed against a primary source | [PLACEHOLDER — routine treatment] |
+| Strong | Clear authority; no contrary LHDN position known | [PLACEHOLDER] |
+| Arguable | Defensible on the authority available, but LHDN may take a different view | [PLACEHOLDER — defend if the amount justifies it] |
+| Doubtful | Contrary authority or published practice exists | [PLACEHOLDER — flag before filing] |
+| Untenable | No supportable basis | [PLACEHOLDER — do not take the position] |
 
 > Every position assessment names the standard it meets and what would change it. A concede/defend recommendation is a `[review]` for the person with settlement authority — the skill surfaces the call, it does not make it.
 
@@ -114,10 +116,10 @@ Rules for every skill, command, and agent in this plugin:
 
 **Work-product header** (prepended to every analysis, response, submission, or memo):
 
-- If Role is Tax professional: `PRIVILEGED & CONFIDENTIAL — PREPARED IN CONTEMPLATION OF A TAX DISPUTE — TAX ADVISER / LITIGATION WORK PRODUCT`
+- If Role is Tax professional: `CONFIDENTIAL — PREPARED IN CONTEMPLATION OF A TAX DISPUTE — TAX ADVISER WORK PRODUCT`
 - If Role is Non-professional: `WORKING NOTES — NOT TAX ADVICE — REVIEW WITH A QUALIFIED TAX ADVISER OR TAX LITIGATOR BEFORE FILING, OBJECTING, OR SETTLING`
 
-**Privilege in tax disputes is narrow and jurisdiction-specific — and asserting it does not create it.** In Malaysia, legal professional privilege attaches to communications with *solicitors*, not generally to tax-agent or accountant working papers; documents prepared by a tax adviser may be obtainable under the ITA's information-gathering powers (e.g., s.81). Litigation privilege requires a dispute to be in reasonable contemplation when the document was created. Keep `PRIVILEGED & CONFIDENTIAL` as a confidentiality marking, but where the practice is Malaysian add: `[Note: tax-adviser working papers are not generally privileged in Malaysia and may be obtainable by LHDN; confirm privilege with a solicitor before relying on this marking to withhold the document.]` A false assurance of protection is worse than none. Remove the header from anything sent to LHDN or the counterparty.
+**The header is a confidentiality marking, not a claim of privilege.** In Malaysia, legal professional privilege attaches to communications with *solicitors*, not generally to tax-agent or accountant working papers; documents prepared by a tax adviser may be obtainable under the ITA's information-gathering powers (e.g., s.81 `[verify]`). Litigation privilege, where it applies at all, requires a dispute to be in reasonable contemplation when the document was created and is a question for a solicitor, not for this plugin. So the header marks the document confidential and claims nothing more. Do not add "PRIVILEGED" to it, and do not describe a document as privileged in any output — a false assurance of protection is worse than none. Where privilege genuinely matters to a matter, the next step is a solicitor's advice, not a stronger header. Remove the header from anything sent to LHDN or the counterparty.
 
 ---
 
@@ -181,7 +183,7 @@ These rules apply to every skill in this plugin. When a skill's text conflicts, 
 
 **Tag vocabulary.** `[verify]` — a factual/legal claim to confirm. `[review]` — a judgment call for the reviewer (concede/proceed, settle/litigate). Provenance tags only when the item literally appeared in that source this session.
 
-**Destination check.** A confidentiality header is a label, not a control. Anything sent to LHDN or the counterparty leaves the privilege circle (such as it is). When the destination is external, flag it and produce a clean external version without the work-product header — and check it discloses nothing the internal version flagged as a weakness.
+**Destination check.** A confidentiality header is a label, not a control. Anything sent to LHDN or the counterparty leaves the firm’s hands, and the confidentiality marking travels no further than the recipient’s goodwill. When the destination is external, flag it and produce a clean external version without the work-product header — and check it discloses nothing the internal version flagged as a weakness.
 
 **Cross-skill severity floor.** A downstream skill carries an upstream finding's severity as a FLOOR unless it states why it's lowering it. Scale: 🔴 Blocking / 🟠 High / 🟡 Medium / 🟢 Low; round UP when ambiguous. A deadline is always at least 🟠, and 🔴 inside its window.
 

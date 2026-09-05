@@ -30,6 +30,7 @@ Only when `## Matter workspaces` in the practice profile has `Enabled: ✓` (set
 - **The opening-balance discipline.** A matter's `matter.md` records brought-forward business losses and unabsorbed CA (Form B) **with the source of each** (the agreed assessment or prior filed return), and the residence conclusion for the YA. These are the figures the computation trusts; they must be sourced, not asserted.
 
 ## What this skill does NOT do
-- Apply to an individual doing their own single return. - Carry context across matters unless explicitly turned on.
+- Apply to an individual doing their own single return.
+- Carry context across matters unless explicitly turned on.
 
 ## Close with a short confirmation of the new state.

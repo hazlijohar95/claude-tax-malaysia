@@ -37,7 +37,7 @@ The rate to withhold (domestic vs treaty, with the basis), the conditions for tr
 ```
 [WORK-PRODUCT HEADER]
 # WHT: [payment] from [payer] to [payee, country]
-## Bottom line — withhold [X]% [domestic / treaty rate] — standard: [will/should/MLTN/review]
+## Bottom line — withhold [X]% [domestic / treaty rate] — standard: [settled / strong / arguable / doubtful]
 ## Characterisation / Domestic rate `[verify]` / Treaty relief (treaty in hand? rate · conditions) / Mechanics & deadline
 ```
 
@@ -49,6 +49,8 @@ The rate to withhold (domestic vs treaty, with the basis), the conditions for tr
 - [ ] Remittance deadline and consequence stated
 
 ## What this skill does NOT do
-- Remit the WHT. - Assert a treaty rate without the treaty in hand. - Decide a borderline characterisation silently.
+- Remit the WHT.
+- Assert a treaty rate without the treaty in hand.
+- Decide a borderline characterisation silently.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

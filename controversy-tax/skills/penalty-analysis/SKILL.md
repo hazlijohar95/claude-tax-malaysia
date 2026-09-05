@@ -32,7 +32,7 @@ Per the facts, assess which apply and the standard each meets:
 - **Reasonable cause / no negligence** — the facts that support it, sourced.
 - **Voluntary disclosure** — if the taxpayer disclosed before discovery, the concessionary rate `[verify the current programme and rate]`.
 - **Cooperation / first-time / proportionality** — mitigating factors the framework recognises `[verify]`.
-- **The adjustment was arguable** — a position at substantial authority+ undercuts a "negligence" penalty.
+- **The adjustment was arguable** — a position with real authority behind it undercuts a "negligence" characterisation.
 
 Each argument: the facts (sourced), the basis `[verify]`, and the standard it meets. Flag the realistic expected reduction as a `[review]` range, not a promise.
 
@@ -56,6 +56,8 @@ Whether to argue the penalty separately, the grounds to lead with, and the reali
 - [ ] Expected reduction given as a flagged range, not a promise
 
 ## What this skill does NOT do
-- Negotiate or file the remission request (it drafts the analysis; the letter is a `--draft` next step). - Assert penalty rates or the remission framework from memory. - Promise an outcome.
+- Negotiate or file the remission request (it drafts the analysis; the letter is a `--draft` next step).
+- Assert penalty rates or the remission framework from memory.
+- Promise an outcome.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`.

@@ -47,6 +47,8 @@ Filter to just the deadline calendar, or just stale matters.
 - [ ] Read-only across matters (no matter file modified)
 
 ## What this skill does NOT do
-- Modify any matter. - Assert deadlines as settled — flags them for verification. - Decide priorities (it surfaces; the reviewer triages).
+- Modify any matter.
+- Assert deadlines as settled — flags them for verification.
+- Decide priorities (it surfaces; the reviewer triages).
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer the dashboard for a portfolio of more than ~10 matters.

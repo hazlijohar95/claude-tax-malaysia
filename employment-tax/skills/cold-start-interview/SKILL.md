@@ -87,7 +87,7 @@ Ask for the payroll register and contribution setup (paste or file). Then per ar
 - **Statutory contributions** — the EPF / SOCSO / EIS rate bands, wage ceilings, and age/citizenship categories applied. **List the categories, not the numbers; tag every rate/ceiling `[verify for the current year]` against the EPF/PERKESO schedules.**
 - **The one thing** — the check this function never skips.
 
-**Reporting standard.** Ask the firm's default threshold before a position goes into a filed return or a remittance (reasonable basis / substantial authority / MLTN / should / will) and when each is used. Write the confidence ladder into the profile.
+**Reporting standard.** Ask the firm's default threshold before a position goes into a filed return or a remittance (settled / strong / arguable / doubtful) and when each is used. Write the confidence bands into the profile. These are descriptive bands, not a statutory standard — do not attach likelihood percentages to them.
 
 ### Part 3: Remittance & filing calendar
 

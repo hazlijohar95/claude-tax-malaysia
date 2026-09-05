@@ -1,6 +1,6 @@
 # Quick Start
 
-**60 seconds.** This gets you to using your plugins.
+**Install takes about a minute; setup takes 2 minutes on the quick path, 10–15 minutes on the full one.** This page walks both.
 
 ## Install in Claude Code
 
@@ -39,9 +39,9 @@ Project scope blocks the plugin from reading files outside the project folder �
 | SST / indirect tax compliance | `indirect-tax` | `/indirect-tax:taxability-determination` |
 | Audit / dispute / appeals work | `controversy-tax` | `/controversy-tax:matter-intake` |
 | Transfer pricing / cross-border / Pillar Two | `international-tax` | `/international-tax:related-party-review` |
-| Building or vetting community tax skills | `tax-builder-hub` | `/tax-builder-hub:skills-qa` |
-
-*(More verticals — personal and employment tax — are on the roadmap and follow the same shape.)*
+| Individual returns (Form BE / Form B) | `personal-tax` | `/personal-tax:tax-computation` |
+| Employer payroll tax (PCB, EPF/SOCSO/EIS, Form E) | `employment-tax` | `/employment-tax:pcb-computation` |
+| Vetting community tax skills you already have | `tax-builder-hub` | `/tax-builder-hub:skills-qa` |
 
 ## What you're installing
 

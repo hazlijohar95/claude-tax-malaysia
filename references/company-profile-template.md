@@ -21,7 +21,7 @@ Edit directly or re-run any plugin's `/cold-start-interview` to update.*
 ## Risk posture
 
 **Overall tax-risk appetite:** [Conservative / middle / aggressive]
-**Reporting standard the firm requires before taking a position:** [Reasonable basis | Substantial authority | More likely than not | Should | Will] *(see the reporting-standards ladder in each plugin's guardrails)*
+**Reporting standard the firm requires before taking a position:** [Settled | Strong | Arguable | Doubtful] *(see the confidence bands in each plugin's profile)*
 **What keeps us up at night:** [The thing that would be a very bad day — e.g., a §113 penalty, a TP adjustment, an SST under-declaration]
 **The question leadership always asks:** [or not known yet]
 

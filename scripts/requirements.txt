@@ -1,0 +1,9 @@
+# Python dependencies for the repo's validation scripts.
+#   pip install -r scripts/requirements.txt
+#
+# Used by:
+#   scripts/validate.py          — JSON Schema validation of reader output
+#   scripts/test-cookbooks.sh    — structural test (parses YAML, checks schemas)
+#   scripts/lint-tool-scope.py   — least-privilege lint (YAML only)
+jsonschema>=4.0
+PyYAML>=6.0

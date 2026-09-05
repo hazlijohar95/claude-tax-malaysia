@@ -30,6 +30,7 @@ Only when `## Matter workspaces` in the practice profile has `Enabled: ✓` (set
 - **Position provenance.** A matter's recorded taxability positions and exemptions carry their basis and source — they are confirmed views, not assumptions to be reused blindly across clients with different facts.
 
 ## What this skill does NOT do
-- Apply to in-house single-entity setups. - Carry context across matters unless turned on.
+- Apply to in-house single-entity setups.
+- Carry context across matters unless turned on.
 
 ## Close with a short confirmation of the new state.

@@ -8,7 +8,7 @@ How `claude-for-tax` was reverse-engineered from `anthropics/claude-for-legal`, 
 |---|---|
 | "Draft for **attorney** review — not legal advice" | "Draft for **qualified tax adviser** review — not tax advice; signing preparer/taxpayer is responsible" |
 | Citation provenance tags (`[Westlaw]`, `[CourtListener]`…) | Authority tags (`[ITA 1967 / statute site]`, `[Public Ruling]`, `[gazette order]`, `[LHDN/RMCD site]`, `[case]`, `[model knowledge — verify]`) |
-| Confidence bands (high / medium / low) | **Reporting-standard ladder** — reasonable basis → substantial authority → MLTN → should → will |
+| Confidence bands (high / medium / low) | **Confidence bands** — settled → strong → arguable → doubtful → untenable (firm vocabulary; Malaysia codifies no penalty-protection ladder, so no percentages are implied) |
 | Privilege / work-product checks | Limited tax-adviser privilege; RMCD/LHDN information-gathering powers; working papers discoverable |
 | Currency trigger (law changes) | Budget / Finance Act / gazette-order changes — currency is even more load-bearing; every rate carries a YA |
 | Malpractice-aware deadline tracking | Filing / CP204 / SST-02 deadlines, penalties, statute of limitations |

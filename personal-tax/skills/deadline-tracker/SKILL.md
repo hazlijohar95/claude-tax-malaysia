@@ -39,6 +39,8 @@ Append a new obligation to the individual's tracking (date, basis, owner) in the
 If nothing is due in 90 days, say so explicitly so the user knows the tracker ran.
 
 ## What this skill does NOT do
-- Assert statutory deadlines as fact — it computes from recorded rules and flags for verification. - File or pay anything. - Replace the firm's own deadline-control system; it complements it.
+- Assert statutory deadlines as fact — it computes from recorded rules and flags for verification.
+- File or pay anything.
+- Replace the firm's own deadline-control system; it complements it.
 
 ## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer the dashboard for a multi-client calendar.
