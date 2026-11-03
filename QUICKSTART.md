@@ -19,7 +19,7 @@
 
 5. **Run setup.** Takes 2 minutes (quick start) or 10–15 minutes (full). Every other command in the plugin reads the profile this writes.
    ```
-   /corporate-tax:cold-start-interview
+   /corporate-tax:setup
    ```
 
 6. **Connect a primary-source tool (or be ready to paste).** Citations and rates are flagged unverified without one. This repo is built **verify-don't-assume**: any Malaysian tax authority recalled from memory is tagged `[model knowledge — verify]` until it's checked against an LHDN/RMCD source or you paste the primary text. Connecting Google Drive / a document store lets the plugin pull your trial balance, accounts, and prior returns directly.
@@ -34,14 +34,14 @@ Project scope blocks the plugin from reading files outside the project folder �
 
 | You are a… | Install… | First command |
 |---|---|---|
-| Corporate tax preparer / reviewer | `corporate-tax` | `/corporate-tax:tax-computation` |
-| In-house tax / financial controller (provision) | `corporate-tax` | `/corporate-tax:tax-provision` |
-| SST / indirect tax compliance | `indirect-tax` | `/indirect-tax:taxability-determination` |
-| Audit / dispute / appeals work | `controversy-tax` | `/controversy-tax:matter-intake` |
-| Transfer pricing / cross-border / Pillar Two | `international-tax` | `/international-tax:related-party-review` |
-| Individual returns (Form BE / Form B) | `personal-tax` | `/personal-tax:tax-computation` |
-| Employer payroll tax (PCB, EPF/SOCSO/EIS, Form E) | `employment-tax` | `/employment-tax:pcb-computation` |
-| Vetting community tax skills you already have | `tax-builder-hub` | `/tax-builder-hub:skills-qa` |
+| Corporate tax preparer / reviewer | `corporate-tax` | `/corporate-tax:compute` |
+| In-house tax / financial controller (provision) | `corporate-tax` | `/corporate-tax:provision` |
+| SST / indirect tax compliance | `indirect-tax` | `/indirect-tax:taxability` |
+| Audit / dispute / appeals work | `controversy-tax` | `/controversy-tax:intake` |
+| Transfer pricing / cross-border / Pillar Two | `international-tax` | `/international-tax:related-party` |
+| Individual returns (Form BE / Form B) | `personal-tax` | `/personal-tax:compute` |
+| Employer payroll tax (PCB, EPF/SOCSO/EIS, Form E) | `employment-tax` | `/employment-tax:pcb` |
+| Vetting community tax skills you already have | `tax-builder-hub` | `/tax-builder-hub:qa` |
 
 ## What you're installing
 
@@ -52,7 +52,7 @@ Each plugin learns your practice through a setup interview, writes it to a pract
 ## Stuck?
 
 - **"Command not found"** after install → you forgot step 4. Restart Claude Code.
-- **"Run setup first"** → run `/<plugin>:cold-start-interview` before any other command.
+- **"Run setup first"** → run `/<plugin>:setup` before any other command.
 - **Authorities flagged `[verify]` / rates flagged** → that's the design. Confirm against the ITA 1967 / a Public Ruling / a gazette order before relying. Paste the primary text and the tag upgrades.
 - **"The numbers don't tie"** → the plugin will tell you when a computation doesn't reconcile to source. That's a feature — fix the source mapping, don't override the CHECK.
 - **"I can't read [file]"** → most often the plugin is project-scoped and the file is outside the project folder. Reinstall user-scoped or move the file in.

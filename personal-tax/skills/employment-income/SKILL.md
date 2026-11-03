@@ -33,7 +33,7 @@ This skill does not invent valuations or exemption amounts. If the basis isn't i
 
 ## Precondition: load the profile
 
-**Read `~/.claude/plugins/config/claude-for-tax/personal-tax/CLAUDE.md`** for the team's BIK/perquisite treatment, EPF treatment, and exemption conventions. If missing or placeholder, redirect to `/personal-tax:cold-start-interview`, or proceed `[PROVISIONAL]` against generic Malaysian defaults with every exemption flagged.
+**Read `~/.claude/plugins/config/claude-for-tax/personal-tax/CLAUDE.md`** for the team's BIK/perquisite treatment, EPF treatment, and exemption conventions. If missing or placeholder, redirect to `/personal-tax:setup`, or proceed `[PROVISIONAL]` against generic Malaysian defaults with every exemption flagged.
 
 ## Inputs required
 
@@ -126,8 +126,8 @@ Taxable employment income reconciles to EA-form total used in the computation: �
 
 - Assert prescribed BIK valuations or exemption amounts as settled fact — it flags them for verification.
 - Decide a borderline taxable/exempt characterisation for you — it surfaces both for adviser judgment.
-- Build the full computation (run `/personal-tax:tax-computation`).
+- Build the full computation (run `/personal-tax:compute`).
 
 ## Close with the next-steps decision tree
 
-End with the next-steps decision tree per CLAUDE.md `## Outputs` — offer to feed this into `/personal-tax:tax-computation` or to build the relief schedule with `/personal-tax:reliefs-rebates`.
+End with the next-steps decision tree per CLAUDE.md `## Outputs` — offer to feed this into `/personal-tax:compute` or to build the relief schedule with `/personal-tax:reliefs`.

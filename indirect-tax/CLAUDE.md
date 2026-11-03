@@ -10,13 +10,13 @@ Rules for every skill, command, and agent in this plugin:
 2. If that file does not exist or still contains [PLACEHOLDER] markers, do NOT refuse the user's request. Offer the choice, then proceed on their answer:
 
    > "I don't have your practice profile yet, so I'll work from generic Malaysian defaults. Two options:
-   > - Run `/indirect-tax:cold-start-interview` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
+   > - Run `/indirect-tax:setup` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
    > - Or say **'provisional'** and I'll answer now against generic Malaysian defaults, tag every output `[PROVISIONAL — profile not configured]`, and flag every rate, threshold and deadline for verification."
 
    On "provisional", or if the user simply repeats the request, DO the work: a clearly-tagged answer from stated defaults is more useful than a refusal, and the source tags and verification flags already tell the reader what is unverified. Carry the `[PROVISIONAL — profile not configured]` tag on every taxability call or return review produced this way, and close by offering the interview again. Never present provisional output as matching the user's house conventions, and never silently drop the tag.
 
    The hard stop is reserved for the irreversible: filing, submitting, remitting, or signing. Those stay gated on an explicit confirmation regardless of profile state (see `## Outputs` and the per-skill gates).
-3. Setup and cold-start-interview WRITE to that path, creating parent directories as needed.
+3. The `setup` skill WRITES to that path, creating parent directories as needed.
 4. On first run after a plugin update, if a populated CLAUDE.md exists at the old cache path but not at the config path, copy it forward before proceeding.
 5. This file is the TEMPLATE. Never write user data here.
 
@@ -25,7 +25,7 @@ Rules for every skill, command, and agent in this plugin:
 
 # Indirect Tax (SST) Practice Profile
 
-*This file is written by the cold-start interview on first run. If you're seeing `[PLACEHOLDER]` values, run `/indirect-tax:cold-start-interview`.*
+*This file is written by the cold-start interview on first run. If you're seeing `[PLACEHOLDER]` values, run `/indirect-tax:setup`.*
 
 *Once populated: edit this file directly. Every skill in this plugin reads it before doing anything.*
 
@@ -59,7 +59,7 @@ Rules for every skill, command, and agent in this plugin:
 | MyInvois / e-invoicing middleware | [PLACEHOLDER ✓/✗] | You paste invoice fields for the readiness check |
 | Slack | [PLACEHOLDER ✓/✗] | Reminders and summaries delivered inline |
 
-*Re-check: `/indirect-tax:cold-start-interview --check-integrations`*
+*Re-check: `/indirect-tax:setup --check-integrations`*
 
 ---
 
@@ -240,7 +240,7 @@ Scope before "do all the periods" / "every supply." Estimate, offer a choice, wa
 
 ## Matter workspaces
 
-*Only for multi-client practices.* **Enabled:** ✗ **Active matter:** none **Cross-matter context:** off. When enabled, skills read this practice-level file for conventions and the matter's `matter.md` for entity facts; outputs go to `~/.claude/plugins/config/claude-for-tax/indirect-tax/matters/<slug>/`. Manage with `/indirect-tax:matter-workspace`.
+*Only for multi-client practices.* **Enabled:** ✗ **Active matter:** none **Cross-matter context:** off. When enabled, skills read this practice-level file for conventions and the matter's `matter.md` for entity facts; outputs go to `~/.claude/plugins/config/claude-for-tax/indirect-tax/matters/<slug>/`. Manage with `/indirect-tax:workspace`.
 
 ---
 
@@ -252,4 +252,4 @@ Scope before "do all the periods" / "every supply." Estimate, offer a choice, wa
 
 ---
 
-*To re-run the interview: `/indirect-tax:cold-start-interview --redo`*
+*To re-run the interview: `/indirect-tax:setup --redo`*

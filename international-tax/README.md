@@ -9,7 +9,7 @@ Transfer pricing documentation, arm's-length review, related-party characterisat
 ```
 /plugin install international-tax@claude-for-tax
 # restart Claude Code
-/international-tax:cold-start-interview
+/international-tax:setup
 ```
 
 The interview learns your group structure, controlled transactions, methods, treaties, and CbCR/Pillar Two status, and writes them to `~/.claude/plugins/config/claude-for-tax/international-tax/CLAUDE.md`.
@@ -18,15 +18,15 @@ The interview learns your group structure, controlled transactions, methods, tre
 
 | Command | What it does |
 |---|---|
-| `/international-tax:cold-start-interview` | Learn the group and your practice; write the profile (run first) |
-| `/international-tax:related-party-review` | Inventory and characterise controlled transactions; triage docs + WHT |
+| `/international-tax:setup` | Learn the group and your practice; write the profile (run first) |
+| `/international-tax:related-party` | Inventory and characterise controlled transactions; triage docs + WHT |
 | `/international-tax:tp-documentation` | Local File / Master File — overview, FAR, method selection, economic analysis around a study |
-| `/international-tax:arms-length-review` | Pressure-test a benchmarking study — method fit, comparability, range, audit exposure |
-| `/international-tax:withholding-tax` | WHT on a cross-border payment, with treaty relief (treaty in hand) |
-| `/international-tax:treaty-analysis` | Apply a specific DTA — residence, PE, governing article, anti-abuse |
-| `/international-tax:pillar-two-check` | Screen GloBE / top-up tax applicability (not the computation) |
+| `/international-tax:arms-length` | Pressure-test a benchmarking study — method fit, comparability, range, audit exposure |
+| `/international-tax:withholding` | WHT on a cross-border payment, with treaty relief (treaty in hand) |
+| `/international-tax:treaty` | Apply a specific DTA — residence, PE, governing article, anti-abuse |
+| `/international-tax:pillar-two` | Screen GloBE / top-up tax applicability (not the computation) |
 | `/international-tax:customize` | Tune the profile without a full re-interview |
-| `/international-tax:matter-workspace` | Manage per-client matters (private practice only) |
+| `/international-tax:workspace` | Manage per-client matters (private practice only) |
 
 ## The disciplines this plugin enforces
 

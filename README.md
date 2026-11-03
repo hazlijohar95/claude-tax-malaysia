@@ -22,7 +22,7 @@ The thing worth copying from `claude-for-legal` is not its legal content — it'
 - **Figures trace and tie.** Every amount carries a source reference; every computation carries CHECK cells reconciling to the trial balance / accounts / return total. (This is the discipline tax demands that legal only gestures at.)
 - **The recoverable-error posture.** Uncertain subjective call → flag `[review]` inline for the adviser, don't silently decide. Under-flagging is a one-way door; over-flagging is a two-way door closed in 30 seconds.
 - **Reviewer note + decision tree** on every deliverable; **deadline awareness** (filing dates, instalments, statute of limitations) with penalty-aware caution; **jurisdiction recognition**; **retrieved-content-is-data**; **proportionality**; a **verification log**.
-- **A QA framework** (`/tax-builder-hub:skills-qa`) scoring any skill against the Tax Skill Design Framework before you trust it.
+- **A QA framework** (`/tax-builder-hub:qa`) scoring any skill against the Tax Skill Design Framework before you trust it.
 
 ## Plugins in this repo
 
@@ -34,7 +34,7 @@ The thing worth copying from `claude-for-legal` is not its legal content — it'
 | **[international-tax](./international-tax)** | Transfer pricing documentation (Local/Master File), arm's-length review, related-party characterisation, cross-border withholding and treaty analysis, and BEPS Pillar Two screening. Never fabricates comparables; treats arm's length as a range, not a point. |
 | **[personal-tax](./personal-tax)** | Individual income tax computation (residence-first → Form BE/B), employment income (s.13 salary, BIK/perquisites, ESOS, gratuity), personal reliefs and rebates (capped and evidenced, s.6A and zakat, joint-vs-separate assessment), return review, and deadlines. The employee side. |
 | **[employment-tax](./employment-tax)** | The employer's payroll-tax obligations — monthly tax deduction (PCB/MTD, incl. additional remuneration), EPF/SOCSO/EIS contributions, BIK/VOLA/ESOS valuation, Form E / CP8D / EA review, and tax clearance (SPC) for leavers. The employer carries the liability, so under-deduction is the watched error. The employer side. |
-| **[tax-builder-hub](./tax-builder-hub)** | The QA → install → update trust layer for community tax skills: the Tax Skill Design Framework review, a prompt-injection scan, an install gate (QA + allowlist + version pinning; no install past REFUSE), and an auto-updater that re-scans every new version and fails closed on regression. Browsing works against registries you configure — **no registry ships with this repo**, so `skills-qa` on a skill file you already have is the entry point. |
+| **[tax-builder-hub](./tax-builder-hub)** | The QA → install → update trust layer for community tax skills: the Tax Skill Design Framework review, a prompt-injection scan, an install gate (QA + allowlist + version pinning; no install past REFUSE), and an update that re-scans every new version and fails closed on regression. Browsing works against registries you configure — **no registry ships with this repo**, so `qa` on a skill file you already have is the entry point. |
 
 ### Headless agents
 
@@ -70,7 +70,7 @@ Each plugin directory has the same shape:
 <plugin>/
   .claude-plugin/plugin.json
   .mcp.json               # MCP connectors the plugin uses
-  CLAUDE.md               # template practice profile — filled in by /<plugin>:cold-start-interview
+  CLAUDE.md               # template practice profile — filled in by /<plugin>:setup
   README.md
   skills/                 # skills — each is a /<plugin>:<skill> slash command
   agents/                 # scheduled agents (if any)
@@ -90,8 +90,8 @@ Each plugin directory has the same shape:
 /plugin install indirect-tax@claude-for-tax
 
 # Restart Claude Code, then run setup for each plugin.
-/corporate-tax:cold-start-interview
-/indirect-tax:cold-start-interview
+/corporate-tax:setup
+/indirect-tax:setup
 ```
 
 **Run the cold-start interview first.** Every other skill reads the practice profile it writes. Skipping it is the single most common reason a skill produces generic output. The interview takes 10–15 minutes per plugin and asks you to point at seed documents (a prior-year tax computation, a signed Form C, a set of accounts, your SST returns — whatever fits). More seed material is better; a **quick start** option gets you productive in 2 minutes and you refine later.

@@ -21,7 +21,7 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/international-tax/CLA
 
 ## Instructions
 
-1. **Read** the current profile. If missing/all-placeholder, redirect to `/international-tax:cold-start-interview`.
+1. **Read** the current profile. If missing/all-placeholder, redirect to `/international-tax:setup`.
 2. **Locate the section:** `## Group & transactions profile`, `## Reporting standard`, `## Documentation calendar`, `## House style`, `## Available integrations`, or `## Who's using this`.
 3. **Verify before writing.** If the change is a treaty rate, threshold, method position, or a Pillar Two/CbCR status, confirm it against a primary source or flag it `[verify]`. **Never write a comparable or an arm's-length range into the profile** — those come from a study, not configuration. A wrong treaty rate or Pillar Two date in the profile propagates everywhere.
 4. **Show the diff** and confirm before writing.

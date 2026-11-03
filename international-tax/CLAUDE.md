@@ -10,13 +10,13 @@ Rules for every skill, command, and agent in this plugin:
 2. If that file does not exist or still contains [PLACEHOLDER] markers, do NOT refuse the user's request. Offer the choice, then proceed on their answer:
 
    > "I don't have your practice profile yet, so I'll work from generic Malaysian defaults. Two options:
-   > - Run `/international-tax:cold-start-interview` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
+   > - Run `/international-tax:setup` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
    > - Or say **'provisional'** and I'll answer now against generic Malaysian defaults, tag every output `[PROVISIONAL — profile not configured]`, and flag every rate, threshold and deadline for verification."
 
    On "provisional", or if the user simply repeats the request, DO the work: a clearly-tagged answer from stated defaults is more useful than a refusal, and the source tags and verification flags already tell the reader what is unverified. Carry the `[PROVISIONAL — profile not configured]` tag on every analysis produced this way, and close by offering the interview again. Never present provisional output as matching the user's house conventions, and never silently drop the tag.
 
    The hard stop is reserved for the irreversible: filing, submitting, remitting, or signing. Those stay gated on an explicit confirmation regardless of profile state (see `## Outputs` and the per-skill gates).
-3. Setup and cold-start-interview WRITE to that path, creating parent directories as needed.
+3. The `setup` skill WRITES to that path, creating parent directories as needed.
 4. On first run after a plugin update, if a populated CLAUDE.md exists at the old cache path but not at the config path, copy it forward before proceeding.
 5. This file is the TEMPLATE. Never write user data here.
 
@@ -25,7 +25,7 @@ Rules for every skill, command, and agent in this plugin:
 
 # International Tax & Transfer Pricing Practice Profile
 
-*Written by the cold-start interview on first run. If you're seeing `[PLACEHOLDER]` values, run `/international-tax:cold-start-interview`.*
+*Written by the cold-start interview on first run. If you're seeing `[PLACEHOLDER]` values, run `/international-tax:setup`.*
 
 *Once populated: edit directly. Every skill reads it before doing anything.*
 
@@ -59,7 +59,7 @@ Rules for every skill, command, and agent in this plugin:
 | Slack | [PLACEHOLDER ✓/✗] | Reminders and summaries delivered inline |
 | Primary-source tax research connector | [PLACEHOLDER ✓/✗] | Authorities, treaty rates, and Pillar Two rules tagged `[model knowledge — verify]` |
 
-*Re-check: `/international-tax:cold-start-interview --check-integrations`*
+*Re-check: `/international-tax:setup --check-integrations`*
 
 ---
 
@@ -222,7 +222,7 @@ Scope before "document all the transactions" / "do the whole Master File." Estim
 
 ## Matter workspaces
 
-*Only for multi-client practices.* **Enabled:** ✗ **Active matter:** none **Cross-matter context:** off. When enabled, skills read this practice-level file for the group profile and conventions and the matter's `matter.md` for client-group facts; outputs go to `~/.claude/plugins/config/claude-for-tax/international-tax/matters/<slug>/`. Manage with `/international-tax:matter-workspace`.
+*Only for multi-client practices.* **Enabled:** ✗ **Active matter:** none **Cross-matter context:** off. When enabled, skills read this practice-level file for the group profile and conventions and the matter's `matter.md` for client-group facts; outputs go to `~/.claude/plugins/config/claude-for-tax/international-tax/matters/<slug>/`. Manage with `/international-tax:workspace`.
 
 ---
 
@@ -234,4 +234,4 @@ Scope before "document all the transactions" / "do the whole Master File." Estim
 
 ---
 
-*To re-run the interview: `/international-tax:cold-start-interview --redo`*
+*To re-run the interview: `/international-tax:setup --redo`*

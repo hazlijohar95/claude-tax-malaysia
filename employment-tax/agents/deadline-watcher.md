@@ -24,7 +24,7 @@ Weekly, Monday morning. Configurable.
 ## What it does
 
 1. Read `~/.claude/plugins/config/claude-for-tax/employment-tax/CLAUDE.md` for the alert destination and the deadline calendar rules.
-2. Run the deadline-tracker logic across the employers in scope (or the active matter portfolio).
+2. Run the deadlines logic across the employers in scope (or the active matter portfolio).
 3. **Apply the currency caution.** The dates are computed from recorded calendar rules; the post explicitly says they must be confirmed against current LHDN / EPF / PERKESO guidance. The agent does not assert statutory dates as fact.
 4. If there are 🔴 items (due ≤14 days) — including the next monthly remittance if it falls in the window — post them regardless of schedule.
 5. Post the report to the destination.

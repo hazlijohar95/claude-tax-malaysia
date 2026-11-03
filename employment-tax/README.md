@@ -9,7 +9,7 @@ The employer's payroll-tax obligations — monthly tax deduction (PCB/MTD), EPF 
 ```
 /plugin install employment-tax@claude-for-tax
 # restart Claude Code
-/employment-tax:cold-start-interview
+/employment-tax:setup
 ```
 
 The interview learns your conventions (PCB method, employee categories, which benefits go into the PCB base, contribution setup, remittance/filing calendar) and writes them to `~/.claude/plugins/config/claude-for-tax/employment-tax/CLAUDE.md`. Every skill reads it. Skipping setup is the main reason a skill produces generic output.
@@ -18,15 +18,15 @@ The interview learns your conventions (PCB method, employee categories, which be
 
 | Command | What it does |
 |---|---|
-| `/employment-tax:cold-start-interview` | Learn your payroll function and write the profile (run first) |
-| `/employment-tax:pcb-computation` | Compute monthly PCB/MTD — base built line by line, normal + additional-remuneration formulas, six CHECK tie-outs, under-deduction watch |
-| `/employment-tax:statutory-contributions` | EPF / SOCSO / EIS — employer and employee portions by band, age, and citizenship, tied to the remittance total |
-| `/employment-tax:bik-perquisites` | Value BIK, perquisites, VOLA, and ESOS — taxable/exempt line on every item, what enters the PCB base and the EA |
-| `/employment-tax:employer-return-review` | Tie Form E / CP8D to the payroll and the year's CP39s, reconcile the EA statements, filing gate |
-| `/employment-tax:tax-clearance` | SPC for leavers — CP21 / CP22A windows and the withholding obligation on final pay |
-| `/employment-tax:deadline-tracker` | PCB / EPF / SOCSO / EIS remittances, Form E / EA, and leaver-notification windows with penalty-aware warnings |
+| `/employment-tax:setup` | Learn your payroll function and write the profile (run first) |
+| `/employment-tax:pcb` | Compute monthly PCB/MTD — base built line by line, normal + additional-remuneration formulas, six CHECK tie-outs, under-deduction watch |
+| `/employment-tax:contributions` | EPF / SOCSO / EIS — employer and employee portions by band, age, and citizenship, tied to the remittance total |
+| `/employment-tax:bik` | Value BIK, perquisites, VOLA, and ESOS — taxable/exempt line on every item, what enters the PCB base and the EA |
+| `/employment-tax:review` | Tie Form E / CP8D to the payroll and the year's CP39s, reconcile the EA statements, filing gate |
+| `/employment-tax:clearance` | SPC for leavers — CP21 / CP22A windows and the withholding obligation on final pay |
+| `/employment-tax:deadlines` | PCB / EPF / SOCSO / EIS remittances, Form E / EA, and leaver-notification windows with penalty-aware warnings |
 | `/employment-tax:customize` | Tune the profile without a full re-interview |
-| `/employment-tax:matter-workspace` | Manage per-employer matters (payroll bureaus only) |
+| `/employment-tax:workspace` | Manage per-employer matters (payroll bureaus only) |
 | scheduled | `deadline-watcher` — weekly remittance + deadline digest to your channel |
 
 ## The disciplines this plugin enforces

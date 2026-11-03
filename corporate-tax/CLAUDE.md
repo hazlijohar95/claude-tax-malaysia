@@ -10,13 +10,13 @@ Rules for every skill, command, and agent in this plugin:
 2. If that file does not exist or still contains [PLACEHOLDER] markers, do NOT refuse the user's request. Offer the choice, then proceed on their answer:
 
    > "I don't have your practice profile yet, so I'll work from generic Malaysian defaults. Two options:
-   > - Run `/corporate-tax:cold-start-interview` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
+   > - Run `/corporate-tax:setup` — 2 minutes for the quick path, 10-15 for the full one — and I'll work to your conventions from then on.
    > - Or say **'provisional'** and I'll answer now against generic Malaysian defaults, tag every output `[PROVISIONAL — profile not configured]`, and flag every rate, threshold and deadline for verification."
 
    On "provisional", or if the user simply repeats the request, DO the work: a clearly-tagged answer from stated defaults is more useful than a refusal, and the source tags and verification flags already tell the reader what is unverified. Carry the `[PROVISIONAL — profile not configured]` tag on every computation, provision, or review produced this way, and close by offering the interview again. Never present provisional output as matching the user's house conventions, and never silently drop the tag.
 
    The hard stop is reserved for the irreversible: filing, submitting, remitting, or signing. Those stay gated on an explicit confirmation regardless of profile state (see `## Outputs` and the per-skill gates).
-3. Setup and cold-start-interview WRITE to that path, creating parent directories as needed.
+3. The `setup` skill WRITES to that path, creating parent directories as needed.
 4. On first run after a plugin update, if a populated CLAUDE.md exists at the old cache path
    (~/.claude/plugins/cache/claude-for-tax/corporate-tax/<version>/CLAUDE.md for any version)
    but not at the config path, copy it forward to the config path before proceeding.
@@ -29,7 +29,7 @@ Rules for every skill, command, and agent in this plugin:
 # Company Income Tax Practice Profile
 
 *This file is written by the cold-start interview on first run. Until then, it's
-a template. If you're seeing `[PLACEHOLDER]` values below, run `/corporate-tax:cold-start-interview`
+a template. If you're seeing `[PLACEHOLDER]` values below, run `/corporate-tax:setup`
 to get interviewed.*
 
 *Once populated: edit this file directly. Every skill in this plugin reads it
@@ -67,7 +67,7 @@ is the final review and signing authority. We handle roughly [N] computations / 
 | Slack | [PLACEHOLDER ✓/✗] | Deadline alerts and summaries delivered inline instead of posted |
 | Primary-source tax research connector | [PLACEHOLDER ✓/✗] | Authorities tagged `[model knowledge — verify]`; you confirm against the ITA / Public Ruling / gazette |
 
-*Re-check: `/corporate-tax:cold-start-interview --check-integrations`*
+*Re-check: `/corporate-tax:setup --check-integrations`*
 
 ---
 
@@ -115,7 +115,7 @@ is the final review and signing authority. We handle roughly [N] computations / 
 
 ## Deadline calendar
 
-*The dates that carry penalties. The deadline-tracker skill reads this.*
+*The dates that carry penalties. The `deadlines` skill reads this.*
 
 | Obligation | Statutory basis `[verify]` | Due | Penalty exposure if missed |
 |---|---|---|---|
@@ -267,7 +267,7 @@ The plugin's job is to make Claude BETTER at tax work, not to channel it away fr
 
 ## Ad-hoc questions in this domain
 
-When the user asks a tax question — not just when they invoke a skill — read the practice profile (and `company-profile.md`) first and apply it: their jurisdiction, framework, conventions, reporting standard, and reviewer. Apply the guardrails even with no skill running — source tags, currency trigger, figures-tie-to-source, jurisdiction recognition, the reviewer note. Frame the answer the way a colleague in that practice would. Suggest a structured skill if one would do better. If the profile isn't populated, give a general answer tagged as unconfigured and point to `/corporate-tax:cold-start-interview`.
+When the user asks a tax question — not just when they invoke a skill — read the practice profile (and `company-profile.md`) first and apply it: their jurisdiction, framework, conventions, reporting standard, and reviewer. Apply the guardrails even with no skill running — source tags, currency trigger, figures-tie-to-source, jurisdiction recognition, the reviewer note. Frame the answer the way a colleague in that practice would. Suggest a structured skill if one would do better. If the profile isn't populated, give a general answer tagged as unconfigured and point to `/corporate-tax:setup`.
 
 ## Proportionality
 
@@ -313,7 +313,7 @@ When a user asks to "do all the entities" or "compute everything," scope first. 
 **Active matter:** none
 **Cross-matter context:** off
 
-When enabled, skills work in the active matter's context: this practice-level CLAUDE.md for conventions and house rules, and the matter's `matter.md` for entity-specific facts and overrides. Outputs go to `~/.claude/plugins/config/claude-for-tax/corporate-tax/matters/<matter-slug>/`. With cross-matter context off (default), a skill in matter A never reads matter B's files. Manage with `/corporate-tax:matter-workspace new | list | switch | close | none`.
+When enabled, skills work in the active matter's context: this practice-level CLAUDE.md for conventions and house rules, and the matter's `matter.md` for entity-specific facts and overrides. Outputs go to `~/.claude/plugins/config/claude-for-tax/corporate-tax/matters/<matter-slug>/`. With cross-matter context off (default), a skill in matter A never reads matter B's files. Manage with `/corporate-tax:workspace new | list | switch | close | none`.
 
 ---
 
@@ -327,4 +327,4 @@ When enabled, skills work in the active matter's context: this practice-level CL
 
 ---
 
-*To re-run the interview: `/corporate-tax:cold-start-interview --redo`*
+*To re-run the interview: `/corporate-tax:setup --redo`*

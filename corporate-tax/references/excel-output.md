@@ -1,8 +1,8 @@
 # Excel / Workbook Output — tax working-paper recipe
 
 *Referenced by the **Dashboard / workbook offer** guardrail and by every
-data-heavy skill (`tax-computation`, `tax-provision`, `capital-allowances`,
-`sst-return-review`, `pcb-computation`, `reliefs-rebates`, the deadline
+data-heavy skill (`compute`, `provision`, `capital-allowances`,
+`/indirect-tax:review`, `/employment-tax:pcb`, `/personal-tax:reliefs`, the deadline
 calendars). This is the **structural** recipe — sheet layout, the CHECK
 formulas, the source column. It does **not** assert any rate, threshold, or
 section; those come from the computation and stay verify-tagged.*

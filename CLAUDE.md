@@ -111,7 +111,7 @@ the Agent Skills spec" below.
 ### Naming
 
 - Plugin `name` must match `^[a-z0-9][a-z0-9-]{1,63}$`.
-- Skill names referenced in prose ("run `/corporate-tax:tax-computation`") must
+- Skill names referenced in prose ("run `/corporate-tax:compute`") must
   be the actual `skills/<name>/` directory name. Short forms look right in prose
   but are dead commands.
 - `marketplace.json`'s `name`/`description`/`author` for a first-party plugin
@@ -122,7 +122,7 @@ the Agent Skills spec" below.
 ### Plugin CLAUDE.md is a template, not project context
 
 Each `<plugin>/CLAUDE.md` is a practice-profile template that the
-`cold-start-interview` skill copies to
+`setup` skill copies to
 `~/.claude/plugins/config/claude-for-tax/<plugin>/CLAUDE.md` on the user's
 machine. It is *not* loaded as project context when the plugin is installed.
 Don't "fix" the placeholders by moving content into a skill — the placeholders
@@ -189,8 +189,8 @@ refusal, and the verify tags already say what is unconfirmed.
 
 ### Trigger phrases are domain-qualified
 
-Six plugins ship a `customize`, `matter-workspace` and (three of them) a
-`deadline-tracker`. With several installed, a bare "what's due" or "change my
+Six plugins ship a `customize`, `workspace` and (three of them) a
+`deadlines`. With several installed, a bare "what's due" or "change my
 settings" matches them all. Every quoted trigger phrase in a `description` is
 qualified with its domain ("what corporate tax is due"). A check in
 `check-conventions.py` would be nice here; for now, if you add a phrase, grep the

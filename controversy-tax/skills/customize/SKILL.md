@@ -21,7 +21,7 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUD
 
 ## Instructions
 
-1. **Read** the current profile. If missing/all-placeholder, redirect to `/controversy-tax:cold-start-interview`.
+1. **Read** the current profile. If missing/all-placeholder, redirect to `/controversy-tax:setup`.
 2. **Locate the section:** `## Dispute posture`, `## Reporting standard`, `## Deadline calendar`, `## House style`, `## Available integrations`, or `## Who's using this`.
 3. **Verify before writing.** If the change is a deadline, section, time-bar period, or penalty rate, confirm it against a primary source or flag it `[verify]` in the profile. A wrong deadline written into the profile is the most dangerous error this plugin can make — never write one as settled.
 4. **Show the diff** and confirm before writing.
@@ -36,7 +36,7 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUD
 
 ## What this skill does NOT do
 - Re-run the interview (use `--redo` on cold-start).
-- Edit a specific matter (use `/controversy-tax:matter-update`).
+- Edit a specific matter (use `/controversy-tax:update`).
 - Write unverified deadlines as settled fact.
 
 ## Close with a short confirmation and, if relevant, the next-steps decision tree.

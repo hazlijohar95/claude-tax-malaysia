@@ -37,7 +37,7 @@ instructions: |
   Steps:
   1. If `reader_output.config_read` is false or `unread_or_unconfigured` is
      non-empty, post a short "indirect-tax not configured / period not
-     determinable — set it up with /indirect-tax:cold-start-interview" note
+     determinable — set it up with /indirect-tax:setup" note
      rather than a false all-clear. Stop there.
   2. Otherwise build the reminder: the taxable period (and current period dates
      if `current_period.computable`), and the SST-02 obligation with its
@@ -66,4 +66,4 @@ instructions: |
 
     🧾 *SST period reminder — as of {as_of}*
     indirect-tax is not configured (or the period isn't determinable from the
-    recorded profile). Run /indirect-tax:cold-start-interview. Not checked: {unread_or_unconfigured}
+    recorded profile). Run /indirect-tax:setup. Not checked: {unread_or_unconfigured}

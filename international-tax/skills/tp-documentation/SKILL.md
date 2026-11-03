@@ -72,4 +72,4 @@ Per `## House style`, in Local File / Master File structure, with the work-produ
 - File the documentation.
 - Assert the TP Rules or OECD guidance from memory — flags them for verification.
 
-## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer `/international-tax:arms-length-review` to scrutinise the method/benchmark, or `/international-tax:related-party-review` to characterise transactions.
+## Close with the next-steps decision tree per CLAUDE.md `## Outputs`. Offer `/international-tax:arms-length` to scrutinise the method/benchmark, or `/international-tax:related-party` to characterise transactions.

@@ -1,9 +1,9 @@
 # Portfolio Ledger — controversy-tax
 #
-# One entry per matter under `matters:`. Source of truth for /portfolio-status
+# One entry per matter under `matters:`. Source of truth for /portfolio
 # rollups. Closed matters stay in this file (searchable history) but are filtered
-# out of active rollups by default. Edit via /controversy-tax:matter-intake and
-# /matter-update — direct edits are fine but show your work in the matter's
+# out of active rollups by default. Edit via /controversy-tax:intake and
+# /update — direct edits are fine but show your work in the matter's
 # history.md.
 #
 # Every date and every statutory reference below is the team's recorded figure,

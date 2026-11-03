@@ -9,7 +9,7 @@ Individual income tax computation and the self-assessment return (Form BE / Form
 ```
 /plugin install personal-tax@claude-for-tax
 # restart Claude Code
-/personal-tax:cold-start-interview
+/personal-tax:setup
 ```
 
 The interview learns your conventions (relief checklist and evidence standard, BIK/perquisite treatment, how you establish residence, reporting-standard threshold, deadline calendar) and writes them to `~/.claude/plugins/config/claude-for-tax/personal-tax/CLAUDE.md`. Every skill reads it. Skipping setup is the main reason a skill produces generic output.
@@ -18,14 +18,14 @@ The interview learns your conventions (relief checklist and evidence standard, B
 
 | Command | What it does |
 |---|---|
-| `/personal-tax:cold-start-interview` | Learn your practice and write the profile (run first) |
-| `/personal-tax:tax-computation` | Build the computation: residence → income sources → total income → (less reliefs) chargeable income → tax on the scale → (less rebates, PCB, instalments) → balance, every line sourced, six CHECK tie-outs |
+| `/personal-tax:setup` | Learn your practice and write the profile (run first) |
+| `/personal-tax:compute` | Build the computation: residence → income sources → total income → (less reliefs) chargeable income → tax on the scale → (less rebates, PCB, instalments) → balance, every line sourced, six CHECK tie-outs |
 | `/personal-tax:employment-income` | s.13 employment income from the EA form — salary, BIK and perquisites, ESOS, gratuity — with the taxable/exempt line drawn on every benefit |
-| `/personal-tax:reliefs-rebates` | The relief checklist (capped and evidenced) and rebates (s.6A, zakat/fitrah), with joint-vs-separate assessment surfaced |
-| `/personal-tax:return-review` | Tie the Form BE/B to the computation, check reliefs and the PCB credit, review residence and declaration boxes, filing gate |
-| `/personal-tax:deadline-tracker` | Compute Form BE / Form B / CP500 / balance-of-tax deadlines with penalty-aware, verify-against-LHDN warnings |
+| `/personal-tax:reliefs` | The relief checklist (capped and evidenced) and rebates (s.6A, zakat/fitrah), with joint-vs-separate assessment surfaced |
+| `/personal-tax:review` | Tie the Form BE/B to the computation, check reliefs and the PCB credit, review residence and declaration boxes, filing gate |
+| `/personal-tax:deadlines` | Compute Form BE / Form B / CP500 / balance-of-tax deadlines with penalty-aware, verify-against-LHDN warnings |
 | `/personal-tax:customize` | Tune the profile without a full re-interview |
-| `/personal-tax:matter-workspace` | Manage per-taxpayer matters (private practice only) |
+| `/personal-tax:workspace` | Manage per-taxpayer matters (private practice only) |
 | scheduled | `deadline-watcher` — weekly deadline digest to your channel |
 
 ## The two disciplines this plugin enforces

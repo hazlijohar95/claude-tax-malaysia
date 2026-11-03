@@ -21,7 +21,7 @@ Targeted edits to `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.
 
 ## Instructions
 
-1. **Read** the current profile. If it's missing or all placeholders, redirect to `/corporate-tax:cold-start-interview` — there's nothing to customize yet.
+1. **Read** the current profile. If it's missing or all placeholders, redirect to `/corporate-tax:setup` — there's nothing to customize yet.
 2. **Locate the section** the user's request maps to: `## Computation conventions`, `## Reporting standard`, `## Deadline calendar`, `## House style`, `## Available integrations`, or `## Who's using this`.
 3. **Verify before writing.** If the change is a rate, threshold, section number, or deadline, apply the guardrail: confirm it against a primary source or flag it `[verify]` in the profile. Never write an unverified figure into the profile as if it were settled — the profile is read by every skill, so a wrong fact here propagates everywhere.
 4. **Show the diff** — the before and after of the lines you'll change — and confirm before writing.

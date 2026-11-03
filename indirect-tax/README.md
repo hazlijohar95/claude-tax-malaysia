@@ -9,7 +9,7 @@ Sales tax and service tax (SST) determination, registration, return review, and 
 ```
 /plugin install indirect-tax@claude-for-tax
 # restart Claude Code
-/indirect-tax:cold-start-interview
+/indirect-tax:setup
 ```
 
 The interview learns your registration profile, your recorded taxability positions, the exemptions you rely on, your reporting standard, and your SST-02 calendar, and writes them to `~/.claude/plugins/config/claude-for-tax/indirect-tax/CLAUDE.md`. Every skill reads it.
@@ -18,13 +18,13 @@ The interview learns your registration profile, your recorded taxability positio
 
 | Command | What it does |
 |---|---|
-| `/indirect-tax:cold-start-interview` | Learn your practice and write the profile (run first) |
-| `/indirect-tax:taxability-determination` | Is this supply taxable / exempt / out of scope, at what rate, with the standard it meets |
-| `/indirect-tax:registration-check` | Test taxable turnover against the threshold for each group; liability date and deadline |
-| `/indirect-tax:sst-return-review` | Tie the SST-02 to the listing, check exemptions and reliefs, submission gate |
-| `/indirect-tax:einvoice-check` | MyInvois structural readiness check on an invoice or template |
+| `/indirect-tax:setup` | Learn your practice and write the profile (run first) |
+| `/indirect-tax:taxability` | Is this supply taxable / exempt / out of scope, at what rate, with the standard it meets |
+| `/indirect-tax:registration` | Test taxable turnover against the threshold for each group; liability date and deadline |
+| `/indirect-tax:review` | Tie the SST-02 to the listing, check exemptions and reliefs, submission gate |
+| `/indirect-tax:einvoice` | MyInvois structural readiness check on an invoice or template |
 | `/indirect-tax:customize` | Tune the profile without a full re-interview |
-| `/indirect-tax:matter-workspace` | Manage per-client matters (private practice only) |
+| `/indirect-tax:workspace` | Manage per-client matters (private practice only) |
 
 ## The two disciplines this plugin enforces
 
@@ -35,7 +35,7 @@ The interview learns your registration profile, your recorded taxability positio
 
 - Submit returns or register the business with RMCD — preparation and review only; submission is the user's gated action.
 - Assert taxable groups, rates, thresholds, or exemptions as settled fact — it flags them for verification.
-- Confirm an invoice's tax treatment via the readiness check (that's `taxability-determination`).
+- Confirm an invoice's tax treatment via the readiness check (that's `taxability`).
 - Handle non-Malaysian VAT/GST without the jurisdiction-recognition flag firing.
 
 ## Connectors

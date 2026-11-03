@@ -1,7 +1,7 @@
 # Company / Practice Profile
 
 *Shared by all Claude for Tax plugins. The first plugin you set up writes this; the rest read it.
-Edit directly or re-run any plugin's `/cold-start-interview` to update.*
+Edit directly or re-run any plugin's `/setup` to update.*
 
 **Practice setting:** [Sole practitioner / small firm | Mid-tier / Big Four | In-house tax function | Government / revenue body | Academic / training]
 **Name:** [Company or firm name]

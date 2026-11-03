@@ -1,14 +1,14 @@
 # matters/ — controversy portfolio data
 
 This folder is the in-repo **template** for the matter portfolio. At runtime the
-matter-workspace and matter-intake skills write to
+workspace and intake skills write to
 `~/.claude/plugins/config/claude-for-tax/controversy-tax/matters/` — this copy
 documents the layout and the ledger schema so they stay consistent.
 
 Two layers:
 
 - **`_log.yaml`** — the ledger. One row per matter. Parseable by skills. Source
-  of truth for `/controversy-tax:portfolio-status` rollups.
+  of truth for `/controversy-tax:portfolio` rollups.
 - **`[slug]/`** — per-matter detail. Narrative and history. Where humans read and
   edit.
 
@@ -38,9 +38,9 @@ matches the slug exactly.
 
 | File | Written by | Edit directly? |
 |---|---|---|
-| `_log.yaml` | `/matter-intake`, `/matter-update` | Yes, but reflect the change in the matter's `history.md` |
-| `matter.md` | `/matter-intake` at intake | Yes, for evolving posture / position notes |
-| `history.md` | `/matter-intake` seeds; `/matter-update` appends | Append-only in practice — treat past entries as record |
+| `_log.yaml` | `/intake`, `/update` | Yes, but reflect the change in the matter's `history.md` |
+| `matter.md` | `/intake` at intake | Yes, for evolving posture / position notes |
+| `history.md` | `/intake` seeds; `/update` appends | Append-only in practice — treat past entries as record |
 
 ## The controlling deadline is the point
 
@@ -52,7 +52,7 @@ without a confirmed controlling deadline is flagged, not filed.
 
 ## Closed matters
 
-Stay here. Don't delete. `/portfolio-status` filters them from active rollups by
+Stay here. Don't delete. `/portfolio` filters them from active rollups by
 default. Closed matters are the record of how positions resolved — the training
 set for portfolio judgment.
 

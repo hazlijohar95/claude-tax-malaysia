@@ -9,7 +9,7 @@ Company income tax computation and the MFRS 112 / IAS 12 tax provision — Malay
 ```
 /plugin install corporate-tax@claude-for-tax
 # restart Claude Code
-/corporate-tax:cold-start-interview
+/corporate-tax:setup
 ```
 
 The interview learns your conventions (add-back checklist, CA treatment, carried-forward tracking, reporting-standard threshold, deadline calendar) and writes them to `~/.claude/plugins/config/claude-for-tax/corporate-tax/CLAUDE.md`. Every skill reads it. Skipping setup is the main reason a skill produces generic output.
@@ -18,14 +18,14 @@ The interview learns your conventions (add-back checklist, CA treatment, carried
 
 | Command | What it does |
 |---|---|
-| `/corporate-tax:cold-start-interview` | Learn your practice and write the profile (run first) |
-| `/corporate-tax:tax-computation` | Build the computation: PBT → adjusted → statutory → chargeable income → tax payable, every line sourced, five CHECK tie-outs |
-| `/corporate-tax:tax-provision` | MFRS 112 / IAS 12 current + deferred tax, deferred-tax proof, effective-rate reconciliation, disclosure note |
+| `/corporate-tax:setup` | Learn your practice and write the profile (run first) |
+| `/corporate-tax:compute` | Build the computation: PBT → adjusted → statutory → chargeable income → tax payable, every line sourced, five CHECK tie-outs |
+| `/corporate-tax:provision` | MFRS 112 / IAS 12 current + deferred tax, deferred-tax proof, effective-rate reconciliation, disclosure note |
 | `/corporate-tax:capital-allowances` | Schedule 3 CA schedule — QE, IA/AA, balancing adjustments, residual expenditure carried forward |
-| `/corporate-tax:return-review` | Tie the Form C to the computation, check carried-forward balances and credits, review disclosure boxes, filing gate |
-| `/corporate-tax:deadline-tracker` | Compute Form C / CP204 / CP204A / instalment deadlines with penalty-aware, verify-against-LHDN warnings |
+| `/corporate-tax:review` | Tie the Form C to the computation, check carried-forward balances and credits, review disclosure boxes, filing gate |
+| `/corporate-tax:deadlines` | Compute Form C / CP204 / CP204A / instalment deadlines with penalty-aware, verify-against-LHDN warnings |
 | `/corporate-tax:customize` | Tune the profile without a full re-interview |
-| `/corporate-tax:matter-workspace` | Manage per-entity matters (private practice only) |
+| `/corporate-tax:workspace` | Manage per-entity matters (private practice only) |
 | scheduled | `deadline-watcher` — weekly deadline digest to your channel |
 
 ## The two disciplines this plugin enforces

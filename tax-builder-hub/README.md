@@ -4,39 +4,39 @@ The trust layer for community tax skills. Discover, evaluate, and install commun
 
 A tax professional installing a random skill from the internet is installing code that runs with access to their source documents, their practice profile, and (often) their clients' financial data and revenue-portal connectors. The hub gives that the review a careful person would do if they could read code.
 
-> **No registry ships with this plugin.** `claude-for-tax` does not operate or bundle a skill registry, and none is configured out of the box. The hub works on what *you* point it at: a registry URL or connector you add during setup, a skill file on disk, or a pasted `SKILL.md`. The QA, trust-gate, and update-diff machinery is the point of the plugin; discovery is only as good as the sources you configure. If you have no sources, `skills-qa` on a file you already have is still the useful entry point.
+> **No registry ships with this plugin.** `claude-for-tax` does not operate or bundle a skill registry, and none is configured out of the box. The hub works on what *you* point it at: a registry URL or connector you add during setup, a skill file on disk, or a pasted `SKILL.md`. The QA, trust-gate, and update-diff machinery is the point of the plugin; discovery is only as good as the sources you configure. If you have no sources, `qa` on a file you already have is still the useful entry point.
 
 ## Setup first
 
 ```
 /plugin install tax-builder-hub@claude-for-tax
 # restart Claude Code
-/tax-builder-hub:cold-start-interview
+/tax-builder-hub:setup
 ```
 
 ## Commands
 
 | Command | What it does |
 |---|---|
-| `/tax-builder-hub:cold-start-interview` | Set up the hub; record your role for other tax plugins to read; configure watched registries and the trusted-source allowlist |
-| `/tax-builder-hub:registry-browser` | Browse the registries *you* configured — list, surface what's new since last sync, filter to your practice; never installs. Does nothing until you add a source |
-| `/tax-builder-hub:skills-qa` | Evaluate a skill against the Tax Skill Design Framework — 13 parameters, 3 tax failure modes, injection scan, verdict |
-| `/tax-builder-hub:skill-installer` | Install through the trust gate — full QA, allowlist check, plain-English trust-surface summary, explicit go-ahead, version pinned and logged; never installs past a REFUSE |
-| `/tax-builder-hub:auto-updater` | Check installed skills for updates — re-run the injection scan, diff the security surface against the pinned version, fail-closed on regression; never silently updates |
-| `/tax-builder-hub:related-skills-surfacer` | Surface complements, alternatives, and would-be conflicts for what you're doing or already have installed |
+| `/tax-builder-hub:setup` | Set up the hub; record your role for other tax plugins to read; configure watched registries and the trusted-source allowlist |
+| `/tax-builder-hub:browse` | Browse the registries *you* configured — list, surface what's new since last sync, filter to your practice; never installs. Does nothing until you add a source |
+| `/tax-builder-hub:qa` | Evaluate a skill against the Tax Skill Design Framework — 13 parameters, 3 tax failure modes, injection scan, verdict |
+| `/tax-builder-hub:install` | Install through the trust gate — full QA, allowlist check, plain-English trust-surface summary, explicit go-ahead, version pinned and logged; never installs past a REFUSE |
+| `/tax-builder-hub:update` | Check installed skills for updates — re-run the injection scan, diff the security surface against the pinned version, fail-closed on regression; never silently updates |
+| `/tax-builder-hub:related` | Surface complements, alternatives, and would-be conflicts for what you're doing or already have installed |
 
 ## The trust gate
 
 Discovery and installation are deliberately separate, and nothing runs code without passing through the gate:
 
-1. **Browse** (`registry-browser`) reads registries as untrusted listings and badges each source 🟢/⚪/🟠 — provenance only, never a quality verdict.
-2. **QA** (`skills-qa`) scores design and scans for injection — at install *and* at update time.
-3. **Install** (`skill-installer`) runs the full QA, checks the allowlist, shows what the skill can do in plain English, and installs only the reviewed version on an explicit go-ahead — pinning it and logging it. A REFUSE verdict has no "install anyway" path.
-4. **Update** (`auto-updater`) treats every new version as untrusted, diffs the security surface against the pinned version, and fails closed on any regression — because the trusted-publisher-poisoned-update is the attack that matters here.
+1. **Browse** (`browse`) reads registries as untrusted listings and badges each source 🟢/⚪/🟠 — provenance only, never a quality verdict.
+2. **QA** (`qa`) scores design and scans for injection — at install *and* at update time.
+3. **Install** (`install`) runs the full QA, checks the allowlist, shows what the skill can do in plain English, and installs only the reviewed version on an explicit go-ahead — pinning it and logging it. A REFUSE verdict has no "install anyway" path.
+4. **Update** (`update`) treats every new version as untrusted, diffs the security surface against the pinned version, and fails closed on any regression — because the trusted-publisher-poisoned-update is the attack that matters here.
 
 ## The Tax Skill Design Framework
 
-`/tax-builder-hub:skills-qa` scores any skill on:
+`/tax-builder-hub:qa` scores any skill on:
 
 - **13 design parameters** — Audience, Work Shape, Delegation Threshold, Input Requirements, Versioning/Ownership, Confidence Bands (mapped to the profile's confidence bands), Failure Modes, Scope Boundaries, Escalation Logic, Trust Surface, Freshness, Schema, Conflicts.
 - **3 tax-specific failure modes** — *tax advice vs. tax support* (is the signing preparer/taxpayer the decision-maker?), *authority & currency integrity* (does it treat authority as verify-by-default and handle the annual-change problem, or hardcode rates?), and *figure integrity* (does it source every figure and tie every computation, or type numbers from memory?).

@@ -9,7 +9,7 @@ Manage tax audits, assessments, and disputes — matter by matter — on the `cl
 ```
 /plugin install controversy-tax@claude-for-tax
 # restart Claude Code
-/controversy-tax:cold-start-interview        # add --new-matter to open your first matter straight after
+/controversy-tax:setup        # add --new-matter to open your first matter straight after
 ```
 
 The interview learns your disputing body, posture, reporting standard, and deadline calendar, and writes them to `~/.claude/plugins/config/claude-for-tax/controversy-tax/CLAUDE.md`. Matter workspaces are on by default — each dispute is a matter.
@@ -18,17 +18,17 @@ The interview learns your disputing body, posture, reporting standard, and deadl
 
 | Command | What it does |
 |---|---|
-| `/controversy-tax:cold-start-interview` | Learn your practice and write the profile (run first) |
-| `/controversy-tax:matter-intake` | Open a matter — **deadline captured first**, facts sourced, assessor's basis pinned |
-| `/controversy-tax:matter-briefing` | Deep brief on one matter, ready for a call |
-| `/controversy-tax:matter-update` | Append a dated event; update deadlines and exposure |
-| `/controversy-tax:portfolio-status` | Rollup — stage, exposure, ranked deadlines, stale matters |
-| `/controversy-tax:audit-response` | Answer an LHDN query from sourced docs without over-conceding |
-| `/controversy-tax:assessment-review` | Pin the basis, test the time bar, recompute adjustments, assess defensibility |
-| `/controversy-tax:objection-appeal` | Draft an s.99 objection or SCIT Form Q — with a hard deadline gate |
-| `/controversy-tax:penalty-analysis` | Penalty exposure and remission / reasonable-cause arguments |
+| `/controversy-tax:setup` | Learn your practice and write the profile (run first) |
+| `/controversy-tax:intake` | Open a matter — **deadline captured first**, facts sourced, assessor's basis pinned |
+| `/controversy-tax:brief` | Deep brief on one matter, ready for a call |
+| `/controversy-tax:update` | Append a dated event; update deadlines and exposure |
+| `/controversy-tax:portfolio` | Rollup — stage, exposure, ranked deadlines, stale matters |
+| `/controversy-tax:respond` | Answer an LHDN query from sourced docs without over-conceding |
+| `/controversy-tax:assessment` | Pin the basis, test the time bar, recompute adjustments, assess defensibility |
+| `/controversy-tax:appeal` | Draft an s.99 objection or SCIT Form Q — with a hard deadline gate |
+| `/controversy-tax:penalties` | Penalty exposure and remission / reasonable-cause arguments |
 | `/controversy-tax:customize` | Tune the profile without a full re-interview |
-| `/controversy-tax:matter-workspace` | Manage matters |
+| `/controversy-tax:workspace` | Manage matters |
 | scheduled | `deadline-watcher` — daily sweep for objection/appeal/response deadlines |
 
 ## The disciplines this plugin enforces
