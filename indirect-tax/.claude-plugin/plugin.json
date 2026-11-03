@@ -10,5 +10,15 @@
   "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
   "skills": [
     "./skills/"
-  ]
+  ],
+  "keywords": [
+    "tax",
+    "malaysia",
+    "sst",
+    "sales-tax",
+    "service-tax",
+    "e-invoicing",
+    "myinvois"
+  ],
+  "privacyPolicyUrl": "https://github.com/hazlijohar95/claude-tax-malaysia/blob/main/PRIVACY.md"
 }

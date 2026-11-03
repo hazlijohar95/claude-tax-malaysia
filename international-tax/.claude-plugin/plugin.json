@@ -10,5 +10,14 @@
   "repository": "https://github.com/hazlijohar95/claude-tax-malaysia",
   "skills": [
     "./skills/"
-  ]
+  ],
+  "keywords": [
+    "tax",
+    "malaysia",
+    "transfer-pricing",
+    "withholding-tax",
+    "treaties",
+    "pillar-two"
+  ],
+  "privacyPolicyUrl": "https://github.com/hazlijohar95/claude-tax-malaysia/blob/main/PRIVACY.md"
 }

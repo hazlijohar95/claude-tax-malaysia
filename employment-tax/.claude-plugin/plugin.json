@@ -11,7 +11,14 @@
   "skills": [
     "./skills/"
   ],
-  "agents": [
-    "./agents/"
-  ]
+  "keywords": [
+    "tax",
+    "malaysia",
+    "payroll",
+    "pcb",
+    "epf",
+    "socso",
+    "form-e"
+  ],
+  "privacyPolicyUrl": "https://github.com/hazlijohar95/claude-tax-malaysia/blob/main/PRIVACY.md"
 }

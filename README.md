@@ -135,6 +135,10 @@ These are reference templates. They get sharper when tuned to how your practice 
 
 No build step. Everything is markdown and JSON.
 
+## Privacy
+
+The plugins collect nothing and run no server of their own. See [PRIVACY.md](PRIVACY.md) for what stays on your machine and what the optional connectors send.
+
 ## License
 
 Licensed under the [Apache License, Version 2.0](LICENSE).

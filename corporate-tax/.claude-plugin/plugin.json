@@ -11,7 +11,14 @@
   "skills": [
     "./skills/"
   ],
-  "agents": [
-    "./agents/"
-  ]
+  "keywords": [
+    "tax",
+    "malaysia",
+    "corporate-tax",
+    "income-tax",
+    "form-c",
+    "capital-allowances",
+    "mfrs-112"
+  ],
+  "privacyPolicyUrl": "https://github.com/hazlijohar95/claude-tax-malaysia/blob/main/PRIVACY.md"
 }

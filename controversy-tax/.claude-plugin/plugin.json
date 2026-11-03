@@ -11,7 +11,13 @@
   "skills": [
     "./skills/"
   ],
-  "agents": [
-    "./agents/"
-  ]
+  "keywords": [
+    "tax",
+    "malaysia",
+    "tax-audit",
+    "objection",
+    "appeal",
+    "lhdn"
+  ],
+  "privacyPolicyUrl": "https://github.com/hazlijohar95/claude-tax-malaysia/blob/main/PRIVACY.md"
 }
